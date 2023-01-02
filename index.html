@@ -6,26 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>common</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/guide.css">
     <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/guide.css">
     <script src="./assets/js/guide.js"></script>
 </head>
 <body>
     <div id="wrap">
         <article id="container">
+
             <section id="layout">
-                layout
+                <div class="ttl__area">
+                    <h2>Layout</h2>
+                </div>
+                <div class="ttl__area-sub">
+                    <h3>.container, .container.full</h3>
+                    <p>.container : 좌우 여백</p>
+                    <p>.container.full : 좌우 여백 X</p>
+                </div>
+                <div class="container">
+                    <div class="col">.container 좌우 여백 있음</div>
+                </div>
+                <div class="container full">
+                    <div class="col">.container.full 좌우 여백 없음</div>
+                </div>
+
+                <div class="ttl__area-sub">
+                    <h3>.row > .col</h3>
+                    <p>.row로 감싼 요소 안에 .col을 넣으면 자동으로 정렬이 맞춰진다.</p>
+                </div>
+                <div class="container row offset1">
+                    <div class="col">col</div>
+                    <div class="col">col</div>
+                </div>
+                <div class="container row offset2">
+                    <div class="col">col</div>
+                    <div class="col">col</div>
+                    <div class="col">col</div>
+                </div>
+                <div class="container row offset3">
+                    <div class="col">col</div>
+                    <div class="col">col</div>
+                    <div class="col">col</div>
+                    <div class="col">col</div>
+                </div>
             </section>
+            <!-- #layout -->
+
             <section id="font">
-                font
+                <div class="ttl__area">
+                    <h2>Font</h2>
+                </div>
+                <div class="ttl__area-sub">
+                    <h3>Web Font Loader</h3>
+                    <p>단순히 CSS가 로드되기 전에 구글 폰트가 로드되길 원하고, 스타일되지 않은 텍스트가 번쩍거리지 않게 하려면, 웹 폰트 로더를 사용하라. 웹 폰트 로더는 사이트의 나머지가 로드되기 전에 로드하고, 스타일되지 않은 텍스트가 번쩍되는 것을 확실하게 피해준다. 비동기 스크립트도 사용할 수 있지만, 폰트가 먼저 로드되는 것을 확실하게 하기위해 동기 스크립트를 사용하는 것이 좋다.</p>
+                </div>
+                <div class="container">
+                    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+                    <script>
+                        WebFont.load({
+                            google: {
+                                families: ['Open Sans', 'Oswald']
+                            },
+                            custom: {
+                                families : ['Spoqa Han Sans Neo', 'Spoqa Han Sans JP'],
+                                urls : ['//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css', '//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css']
+                            }
+                        });
+                    </script>
+                </div>
+                <div class="container full pre">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'Oswald']
+        },
+        custom: {
+            families : ['Spoqa Han Sans Neo', 'Spoqa Han Sans JP'],
+            urls : ['//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css', '//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css']
+        }
+    });
+</script>
+                </div>
             </section>
+            <!-- #font -->
+
+
+            <section id="table">
+                <div class="ttl__area">
+                    <h2>Table</h2>
+                </div>
+                <div class="ttl__area-sub">
+                    <h3>table basic</h3>
+                    <p>기본 테이블</p>
+                </div>
+            </section>
+            <!-- #table -->
+
             <section id="form">
-                <div class="ttl_area">
+                <div class="ttl__area">
                     <h2>Form</h2>
                 </div>
-                <div class="ttl_sub__area">
-                    <h2>input</h2>
-                    <P>discription</P>
+                <div class="ttl__area-sub">
+                    <h3>input</h3>
+                    <p>discription</p>
                 </div>
                 <form>
                     <div class="form__group">
@@ -37,6 +121,8 @@
                     </div>
                 </form>
             </section>
+            <!-- #form -->
+
         </article>
     </div>
 </body>

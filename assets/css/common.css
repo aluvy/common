@@ -1,0 +1,10 @@
+
+/* layout */
+.container{margin:0 2rem;}
+.container.full{margin:0;}
+
+.row{display:flex; align-items:center; justify-content: space-between;}
+.col{flex:1 1 auto;}
+.row.offset1{gap:1rem;}
+.row.offset2{gap:2rem;}
+.row.offset3{gap:3rem;}
