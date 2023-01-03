@@ -30,5 +30,7 @@ footer{border-top:1px solid #eee; text-align:center; color:#999; padding:2rem 0;
 .ttl__area-sub{margin:5rem 0 2rem;}
 .ttl__area-sub h3{font-size:2rem; color:#000; font-weight:700}
 .ttl__area-sub p{margin:1rem 0 0; font-size:1.6rem; line-height:1.4;}
+.ttl__area-sub a{color:royalblue;}
+.ttl__area-sub a:hover{text-decoration: underline;}
 
 .pre{background:whitesmoke; padding:.5rem 2rem; line-height:1.4;}
