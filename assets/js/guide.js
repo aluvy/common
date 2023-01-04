@@ -66,6 +66,7 @@ window.addEventListener("load", ()=>{
         window.location.href = href;
 
         container.replaceChildren(eval(pages[elem]));
+        window.scrollTo(0, 0);
     }))
 
 })
