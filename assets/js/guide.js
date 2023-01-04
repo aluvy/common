@@ -8,9 +8,11 @@ window.addEventListener("load", ()=>{
             <h2 class="blind">navigation area</h2>
             <ul>
                 <li><a href="#layout">layout</a></li>
-                <li><a href="#font">font</a></li>
+                <li><a href="#webFont">webFont</a></li>
                 <li><a href="#table">table</a></li>
                 <li><a href="#form">form</a></li>
+                <li><a href="#text">text</a></li>
+                <li><a href="#image">image, icon</a></li>
             </ul>
         </nav>
     `;

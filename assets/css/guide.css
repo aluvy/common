@@ -21,6 +21,10 @@ footer{border-top:1px solid #eee; text-align:center; color:#999; padding:2rem 0;
 
 /* **** common **** */
 #wrap > #container{padding:2rem;}
+.guide__sample{border:1px solid #ddd; padding:2rem;}
+.guide__caption{font-size:1.2rem; color:#999; font-style:italic; margin:5rem 0 1rem; background:#f2f2f2; padding:0.5rem 1rem;}
+.guide__sample .guide__caption:first-child{margin-top:0;}
+.pre{background:whitesmoke; padding:.5rem 2rem; line-height:1.4;}
 
 .container + .container{margin-top:1rem;}
 
@@ -32,5 +36,3 @@ footer{border-top:1px solid #eee; text-align:center; color:#999; padding:2rem 0;
 .ttl__area-sub p{margin:1rem 0 0; font-size:1.6rem; line-height:1.4;}
 .ttl__area-sub a{color:royalblue;}
 .ttl__area-sub a:hover{text-decoration: underline;}
-
-.pre{background:whitesmoke; padding:.5rem 2rem; line-height:1.4;}
