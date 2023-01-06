@@ -59,6 +59,8 @@ input, textarea, select, button, a{
 	outline:none;
 }
 
+button {cursor:pointer; background:none; border:0 none;}
+
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-thumb{height:30%;background:rgba(0,0,0,.4);border-radius:10px}
 ::-webkit-scrollbar-track{background:rgba(33,122,244,.03)}
