@@ -305,11 +305,11 @@ code input{display: block; width:40rem; text-align:center; background:transparen
 /* **** img_item > partner **** */
 #partner .content li {flex:0 0 14rem; height:14rem;}
 .img_item.partner {width:5.4rem; height:5.4rem;}
-.img_item.partner.sec{background-image: url(../img/img/partner_kb_sec.png);}
-.img_item.partner.life{background-image: url(../img/img/partner_kb_life.png);}
-.img_item.partner.insure{background-image: url(../img/img/partner_kb_insure.png);}
-.img_item.partner.capital{background-image: url(../img/img/partner_kb_capital.png);}
-.img_item.partner.card{background-image: url(../img/img/partner_kb_card.png);}
+.img_item.partner.kb_sec{background-image: url(../img/img/partner_kb_sec.png);}
+.img_item.partner.kb_life{background-image: url(../img/img/partner_kb_life.png);}
+.img_item.partner.kb_insure{background-image: url(../img/img/partner_kb_insure.png);}
+.img_item.partner.kb_capital{background-image: url(../img/img/partner_kb_capital.png);}
+.img_item.partner.kb_card{background-image: url(../img/img/partner_kb_card.png);}
 
 /* **** img_item > etc **** */
 .img_item.etc.usim01{width:18rem; height:21.742rem; background-image: url(../img/img/etc_usim01.png);}
