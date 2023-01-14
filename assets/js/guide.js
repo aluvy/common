@@ -12,7 +12,6 @@ window.addEventListener("load", ()=>{
                 <li><a href="#table">table</a></li>
                 <li><a href="#form">form</a></li>
                 <li><a href="#text">text</a></li>
-                <li><a href="#image">image, icon</a></li>
             </ul>
         </nav>
     `;

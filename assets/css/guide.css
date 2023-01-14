@@ -15,6 +15,11 @@ footer{border-top:1px solid #eee; text-align:center; color:#999; padding:2rem 0;
 
 
 /* **** section **** */
+@keyframes pageload {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+article > section {animation:pageload 1 .5s;}
 #layout .row{background:#eee;}
 #layout .col{text-align:center; padding:2rem 0; background:#ddd; border:1px solid #ccc;}
 
