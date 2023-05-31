@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a11yTabUI</title>
+    <!-- <link rel="stylesheet" href="../../assets/css/reset.css" /> -->
+    <link rel="stylesheet" href="assets/css/popup.css" />
+    <script src="assets/js/popup.js"></script>
+</head>
+<body>
+    
+<div class="wrapper">
+    <p><a href="http://naver.com">포커스 테스트를 위한 링크</a></p>
+    <button aria-haspopup="dialog" data-popup="popup1">팝업 열기</button>
+    <div style="height:130vh; display: flex; align-items: flex-end;">
+      <button aria-haspopup="dialog" data-popup="popup3">팝업 열기</button>
+    </div>
+  </div>
+  <section class="wrap-layer-popup" data-popup="popup1" role="dialog">
+    <div class="inner-layer-popup">
+      <div class="wrap-layer-popup-title" tabindex="0">
+        <h1>타이틀</h1>
+      </div>
+      <div class="layer-popup-contents">
+        <div class="inner">
+          내용<br/>내용<br/>내용<br/>내용<br/><a href="javascript:;">테스트테스트</a>내용<br/>내용<br/>내용<br/>내용<br/><a href="javascript:;">테스트테스트</a>내용<br/>내용<br/>내용<br/>
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox">
+            <span>체크체크</span>
+          </label>
+          <button aria-haspopup="dialog" data-popup="popup2"><span>2차 팝업 열기</span></button>
+          <button aria-haspopup="dialog" data-popup="popup4"><span>2차 컨펌 팝업 열기</span></button>
+        </div>
+      </div>
+      <div class="layer-popup-bottom">
+        <button popup-close="popup1" popup-close-all="true">팝업 모두 닫기</button>
+        <button popup-close="popup1">현재 팝업 닫기</button>
+      </div>
+      <button class="btn-layer-close" popup-close="popup1"><span class="hidden">현재 팝업 닫기</span></button>
+    </div>
+  </section>
+  <section class="wrap-layer-popup" data-popup="popup2" role="dialog">
+    <div class="inner-layer-popup">
+      <div class="wrap-layer-popup-title" tabindex="0">
+        <h1>타이틀22</h1>
+      </div>
+      <div class="layer-popup-contents">
+        <div class="inner">
+          내용<br/><a href="javascript:;">테스트테스트</a>내용<br/>내용<br/><a href="javascript:;">테스트테스트</a>내용<br/>내용<br/>
+          <button aria-haspopup="dialog" data-popup="popup3">3차 팝업 열기</button>
+        </div>
+      </div>
+      <div class="layer-popup-bottom">
+        <button popup-close="popup2">현재 팝업 닫기</button>
+        <button popup-close="popup2" popup-close-all="true">팝업 모두 닫기</button>
+      </div>
+      <button popup-close="popup2" class="btn-layer-close"><span class="hidden">현재 팝업 닫기</span></button>
+    </div>
+  </section>
+  <section class="wrap-layer-popup" data-popup="popup3" role="dialog">
+    <div class="inner-layer-popup">
+      <div class="wrap-layer-popup-title" tabindex="0">
+        <h1>타이틀3333</h1>
+      </div>
+      <div class="layer-popup-contents">
+        <div class="inner">
+          내용3333<a href="javascript:;">테스트테스트</a>내용내용내용<a href="javascript:;">테스트테스트</a>내용내용내용내용내용내용내용내용내용내용내용내용
+        </div>
+      </div>
+      <div class="layer-popup-bottom">
+        <button popup-close="popup3"><span>현재 팝업 닫기</span></button>
+        <button popup-close="popup3" popup-close-all="true">팝업 모두 닫기</button>
+      </div>
+      <button popup-close="popup3" class="btn-layer-close" popup-close-all="true"><span class="hidden">현재 팝업 닫기</span></button>
+    </div>
+  </section>
+  <section class="wrap-layer-popup" data-popup="popup4" role="dialog">
+    <div class="inner-layer-popup">
+      <div class="wrap-layer-popup-title" tabindex="0">
+        <h1>컴펌팝업</h1>
+      </div>
+      <div class="layer-popup-contents">
+        <div class="inner">
+          내용3333<a href="javascript:;">테스트테스트</a>내용내용내용<a href="javascript:;">테스트테스트</a>내용내용내용내용내용내용내용내용내용내용내용내용
+          <button popup-close="popup4" popup-close-all="true">팝업 모두 닫기</button>
+        </div>
+      </div>
+      <div class="layer-popup-bottom">
+        <button popup-close="popup4" popup-confirm="popup4"><span>컨펌확인</span></button>
+        <button popup-close="popup4" popup-cancle="popup4"><span>컨펌취소</span></button>
+      </div>
+      <button popup-close="popup4" class="btn-layer-close"><span class="hidden">현재 팝업 닫기</span></button>
+    </div>
+  </section>
+  <script>
+  // callback event
+  // confirm event
+  const confirmEvt = {
+    popup4: () => {
+      document.querySelector('#checkbox').checked = true;
+    }
+  };
+  // cancel event
+  const cancelEvt = {
+    popup4: () => {
+      // cancel evnet
+    }
+  };
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.wrap-slide-box {position: relative; width: 100%; max-width: 700px; height: 400px; margin: 0 auto;}
+.swiper-container {width: 80%; height: 100%; margin: 0 auto; overflow: hidden;}
+.swiper-slide {display: flex; flex-wrap: wrap; align-content: center; justify-content: center; width: 100%;}
+.swiper-slide h1 {width: 100%; text-align: center;}
+.swiper-slide ol {width: auto; margin: 0 auto;}
+.swiper-slide.slide01 {background-color: palegoldenrod;}
+.swiper-slide.slide02 {background-color: paleturquoise;}
+.swiper-slide.slide03 {background-color:palevioletred;}
+.swiper-slide.slide04 {background-color:lightsteelblue;}
+.swiper-slide.slide05 {background-color:yellowgreen;}
+.wrap-autoplay-control {position: absolute; z-index: 10; bottom: 7px; left: calc(50% + 60px); transform: translateX(-50%);}
+.wrap-autoplay-control button {display: block; width: 20px; height: 20px; border: 0; background: transparent; cursor: pointer; }
+.wrap-autoplay-control button:before {display: block; content: ''; position: absolute; }
+.wrap-autoplay-control button[aria-pressed="false"]:before {top: 4px; left: 4px; width: 12px; height: 12px; border-left: 3px solid #000; border-right: 3px solid #000; box-sizing: border-box;}
+.wrap-autoplay-control button[aria-pressed="true"]:before {top: 2px; left: 2px; border-top: 8px solid transparent; border-left: 16px solid #000; border-bottom: 8px solid transparent;}
+
+
+.wrap-slide-box {position: relative; width: 100%; max-width: 700px; height: 400px; margin: 0 auto;}
+.swiper-container {width: 80%; height: 100%; margin: 0 auto; overflow: hidden;}
+.swiper-slide {display: flex; flex-wrap: wrap; align-content: center; justify-content: center; width: 100%;}
+.swiper-slide h1 {width: 100%; text-align: center;}
+.swiper-slide ol {width: auto; margin: 0 auto;}
+.swiper-slide.slide01 {background-color: palegoldenrod;}
+.swiper-slide.slide02 {background-color: paleturquoise;}
+.swiper-slide.slide03 {background-color:palevioletred;}
+.swiper-slide.slide04 {background-color:lightsteelblue;}
+.swiper-slide.slide05 {background-color:yellowgreen;}
+
+.wrap-slide-box {position: relative; width: 100%; max-width: 700px; height: 400px; margin: 0 auto;}
+.swiper-container {width: 80%; height: 100%; margin: 0 auto; overflow: hidden;}
+.swiper-slide {display: flex; flex-wrap: wrap; align-content: center; justify-content: center; width: 100%;}
+.swiper-slide h1 {width: 100%; text-align: center;}
+.swiper-slide ol {width: auto; margin: 0 auto;}
+.swiper-slide.slide01 {background-color: palegoldenrod;}
+.swiper-slide.slide02 {background-color: paleturquoise;}
+.swiper-slide.slide03 {background-color:palevioletred;}
+.swiper-slide.slide04 {background-color:lightsteelblue;}
+.swiper-slide.slide05 {background-color:yellowgreen;}

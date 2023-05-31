@@ -1,0 +1,139 @@
+.wrap-layer-popup {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 991;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .wrap-layer-popup.popup-open {
+    display: flex;
+  }
+  .wrap-layer-popup.popup-open > .inner-layer-popup {
+    opacity: 1;
+  }
+  .wrap-layer-popup.prev-popup {
+    z-index: 989;
+  }
+  .wrap-layer-popup > .inner-layer-popup {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    width: 400px;
+    max-height: 100%;
+    height: auto;
+    opacity: 0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .wrap-layer-popup .wrap-layer-popup-title {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+  }
+  .wrap-layer-popup .wrap-layer-popup-title h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  
+  .wrap-layer-popup .layer-popup-contents {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+  }
+  .wrap-layer-popup .layer-popup-contents > .inner {
+    /* max-height: calc(100% - 50px); */
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .wrap-layer-popup .layer-popup-bottom {
+    display: flex;
+    width: 100%;
+  }
+  .wrap-layer-popup .layer-popup-bottom button {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    background-color: #666;
+    color: #fff;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+  }
+  .wrap-layer-popup .layer-popup-bottom button[popup-cancle] {
+    background-color: #fff;
+    color: #000;
+    border-top-color: #ccc;
+  }
+  .popup-dimmed {
+    position: fixed;
+    z-index: 990;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    transition: opacity .2s;
+  }
+  .scroll-lock {
+    overflow: hidden;
+  }
+  .wrapper {
+    width: 900px;
+    margin: 0 auto;
+  }
+  .hidden {
+    position: relative;
+    z-index: -1;
+    display: inline-block;
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    border: 0;
+    clip: rect(1px,1px,1px,1px);
+    clip-path: inset(50%);
+    word-break: initial;
+    word-wrap: initial;
+  }
+  
+  .btn-layer-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+  }
+  .btn-layer-close::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 3px;
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+    transform: rotate(45deg);
+  }
+  .btn-layer-close::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 3px;
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+    transform: rotate(-45deg);
+  }
+  button {
+    cursor: pointer;
+  }
