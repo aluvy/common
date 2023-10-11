@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#fff">
+  <title>common</title>
+  <link rel="shortcut icon" href="./favicon.png">
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+  <script src="./assets/js/front.js"></script>
+</head>
+<body class="guide">
+  <div class="guide_wrap">
+    <header id="header">
+      <h1><a href="#">logo</a></h1>
+      <dl class="status_info">
+        <dt>진행중</dt>
+        <dd class="ing"></dd>
+        <dt>완료</dt>
+        <dd class="end"></dd>
+        <dt>수정</dt>
+        <dd class="modify"></dd>
+      </dl>
+      <nav>
+        <ul>
+          <li class="on"><a target="iframe" href="list/guide.html">guide</a></li>
+          <li><a target="iframe" href="list/common.html">common, etc</a></li>
+          <li><a target="iframe" href="list/main.html">main</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="guide_cont">
+      <iframe src="list/guide.html" name="iframe" id="iframe" onload="$guide.iframe(this)" scrolling="no"></iframe>
+    </div>
+  </div>
+</body>
+</html>

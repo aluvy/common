@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+body.guide::-webkit-scrollbar {width:6px; height:6px;}
+body.guide::-webkit-scrollbar-thumb {background-color:#ddd; border-radius:6px;}
+body.guide::-webkit-scrollbar-track {background-color:#fafafa; border-radius:6px;}
+
+body.guide{min-width:120rem; overflow-x:scroll;}
+
+body.guide {
+	#header{position:fixed; left:0; top:0; width:100%; height:10rem; padding:2rem; background:#fff; box-shadow:0 0 1rem rgba(0,0,0, 0.1);}
+	#header h1 a{display:block; width:fit-content; font-size:2rem; font-weight:700;}
+
+	#header .status_info{position:absolute; right:2rem; top:2rem; display:flex; align-items:center;}
+	#header .status_info dt{font-size:1.2rem; margin-right:0.6rem;}
+	#header .status_info dd + dt {margin-left:2rem;}
+	#header .status_info dd::before{content:''; display:block; width:1rem; height:1rem; background:red;}
+	#header .status_info dd.ing::before{background:#53b100;}
+	#header .status_info dd.end::before{background:#0142b3;}
+	#header .status_info dd.modify::before{background:#e30101; animation:modify_status both linear infinite 1.3s;}
+
+	#header nav{display:block; margin:1.6rem 0 0; overflow-x:scroll;}
+	#header nav ul{display:flex; align-items:center; justify-content:flex-start; gap:0.4rem;}
+	#header nav ul li a{display:block; height:2.8rem; line-height:2.8rem; font-size:1.4rem; padding:0 1rem; border-radius:0.4rem; word-break: keep-all;}
+	#header nav ul li.on a{background:#f3f1ea; font-weight:700;}
+
+	#guide_cont{padding:12rem 2rem 2rem;}
+	#guide_cont iframe{width:100%; min-height:100%;}
+}
+
+#guide_status{display:flex; align-items:center; justify-content:space-between; margin:0 0 1rem;}
+#guide_status .sort{margin-right:auto; display:flex; align-items:center}
+#guide_status .sort select{height:3rem; font-size:1.2rem; border:1px solid #ccc; border-radius:0.4rem; padding:0 4rem 0 1rem; background:url(../images/ico/select_arrow.png) right top no-repeat;}
+#guide_status .graph{display:flex; align-items:center;}
+#guide_status .graph span{font-size:1.1rem;}
+#guide_status .graph .body{display:block; width:10rem; height:0.6rem; background:#e8e8e8; border-radius:0.6rem; margin-left:0.6rem;}
+#guide_status .graph .per{display:block; height:100%; width:0; border-radius:0.6rem; background:#fc6969; animation: graph_per .5s;}
+#guide_status .info{display:flex; align-items:center; font-size:1.2rem; margin-left:2rem;}
+#guide_status .info dd{color:#fc6969; font-weight:700; margin-left:0.4rem;}
+#guide_status .info dd + dt {margin-left:1rem;}
+
+#guide_title{height:3.4rem; line-height:3.4rem; font-size:1.5rem; background:#666; color:#fff; font-weight:700; padding:0 1rem;}
+#guide_table{border-top:px solid #000;}
+#guide_table tr:hover td{background:#fc69690b; border-bottom-color:#fc6969;}
+#guide_table th,
+#guide_table td{font-size:1.2rem; border-bottom:1px solid #ddd; font-weight:400; padding:1rem 0.8rem;}
+#guide_table thead th{background:#f0f0f0;}
+#guide_table tbody td{border-bottom:1px solid #ddd; padding:1.5rem 0.8rem;}
+#guide_table .hid{background:#ededed; text-decoration:line-through; color:#999;}
+#guide_table .hid td[colspan='10']{padding:0.4rem;}
+#guide_table .id{text-align:center;}
+#guide_table .id a{text-decoration:underline; color:#000; font-weight:700;}
+#guide_table .id + td{text-align:center; font-size:1.1rem; color:#999;}
+#guide_table .date{text-align:center; font-size:1.1rem; color:#999;}
+#guide_table .woker{text-align:center; font-size:1.1rem; color:#999;}
+#guide_table .status{text-align:center;}
+#guide_table .ing .status::before{content:'진행'; font-size:0; display:block; width:1rem; height:1rem; margin:0 auto; background:#53b100;}
+#guide_table .end .status::before{content:'완료'; font-size:0; display:block; width:1rem; height:1rem; margin:0 auto; background:#0142b3;}
+#guide_table .modify .status::before{content:'수정'; font-size:0; display:block; width:1rem; height:1rem; margin:0 auto; background:#e30101; animation:modify_status both linear infinite 1.3s;}
+
+@keyframes graph_per {
+	0% {width:0%;}
+	100% {}
+}
+
+@keyframes modify_status {
+	0% {opacity:1;}
+	40% {opacity:0.2;}
+	60% {opacity:0.2;}
+	100% {opacity:1;}
+}
