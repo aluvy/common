@@ -18,7 +18,7 @@ body.guide {
 	#header .status_info dd.end::before{background:#0142b3;}
 	#header .status_info dd.modify::before{background:#e30101; animation:modify_status both linear infinite 1.3s;}
 
-	#header nav{display:block; margin:1.6rem 0 0; overflow-x:scroll;}
+	#header nav{display:block; margin:1.6rem 0 0;}
 	#header nav ul{display:flex; align-items:center; justify-content:flex-start; gap:0.4rem;}
 	#header nav ul li a{display:block; height:2.8rem; line-height:2.8rem; font-size:1.4rem; padding:0 1rem; border-radius:0.4rem; word-break: keep-all;}
 	#header nav ul li.on a{background:#f3f1ea; font-weight:700;}
