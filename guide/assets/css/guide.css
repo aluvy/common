@@ -45,6 +45,8 @@ body.guide {
 #guide_table td{font-size:1.2rem; border-bottom:1px solid #ddd; font-weight:400; padding:1rem 0.8rem;}
 #guide_table thead th{background:#f0f0f0;}
 #guide_table tbody td{border-bottom:1px solid #ddd; padding:1.5rem 0.8rem;}
+#guide_table tbody td p{line-height:1.2}
+#guide_table tbody td p + p{margin-top:0.6rem;}
 #guide_table .hid{background:#ededed; text-decoration:line-through; color:#999;}
 #guide_table .hid td[colspan='10']{padding:0.4rem;}
 #guide_table .id{text-align:center;}
