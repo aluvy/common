@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>guide</title>
+  <link rel="shortcut icon" href="../favicon.png">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/front.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header id="header"></header>
+    <div id="container">
+
+      <div class="content">
+        <div class="ttl_page">
+          <h2 class="h2">Table</h2>
+        </div>
+        
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">default</h3>
+          </div>
+          <div class="table">
+            <table>
+              <caption>테이블 제목 정보</caption>
+              <colgroup>
+                <col style="width:25%">
+                <col style="width:40%">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">제목</th>
+                  <th scope="col">제목</th>
+                  <th scope="col">제목<br>(타이틀 2줄 케이스)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">제목</th>
+                  <td class="center"><a href="#" class="btn outline xs">바로가기</a></td>
+                  <td>내용 <a href="#" class="btn outline xs">바로가기</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">제목</th>
+                  <td class="right">2.43%</td>
+                  <td>내용</td>
+                </tr>
+                <tr>
+                  <th scope="row">제목</th>
+                  <td class="right">123,456,789 원</td>
+                  <td>내용</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>합계</th>
+                  <td class="right">123,456,789 원</td>
+                  <td class="center">-</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">가로형</h3>
+            <div class="table">
+              <table>
+                <caption>테이블 제목 정보</caption>
+                <colgroup>
+                  <col style="width:50%">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">제목</th>
+                    <th scope="col">제목</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>내용</td>
+                    <td>내용</td>
+                  </tr>
+                  <tr>
+                    <td>내용</td>
+                    <td class="center">요소별 정렬 center</td>
+                  </tr>
+                  <tr>
+                    <td>내용</td>
+                    <td class="right">요소별 정렬 right</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">세로형</h3>
+          </div>
+          <div class="table">
+            <table>
+              <caption>테이블 제목 정보</caption>
+              <colgroup>
+                <col style="width:30%">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">제목</th>
+                  <td>내용</td>
+                </tr>
+                <tr>
+                  <th scope="row">제목</th>
+                  <td>내용</td>
+                </tr>
+                <tr>
+                  <th scope="row">제목</th>
+                  <td>내용</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">왼쪽정렬</h3>
+          </div>
+          <div class="table">
+            <div class="table_caption">
+              <span class="lt">왼쪽영역</span>
+              <span class="rt">오른쪽영역</span>
+            </div>
+            <table>
+              <caption>테이블 제목 정보</caption>
+              <colgroup>
+                <col style="width:50%">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">제목</th>
+                  <th scope="col">제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>내용</td>
+                  <td>내용</td>
+                </tr>
+                <tr>
+                  <td>내용</td>
+                  <td>내용</td>
+                </tr>
+                <tr>
+                  <td>내용</td>
+                  <td>내용</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">센터정렬</h3>
+          </div>
+          <div class="table">
+            <div class="table_caption">
+              <span class="lt">왼쪽영역</span>
+              <span class="rt">오른쪽영역</span>
+            </div>
+            <table class="center">
+              <caption>테이블 제목 정보</caption>
+              <colgroup>
+                <col style="width:50%">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">제목</th>
+                  <th scope="col">제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>내용</td>
+                  <td>내용</td>
+                </tr>
+                <tr>
+                  <td>내용</td>
+                  <td>내용</td>
+                </tr>
+                <tr>
+                  <td>내용</td>
+                  <td>내용</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">우측정렬</h3>
+          </div>
+          <div class="table">
+            <div class="table_caption">
+              <span class="lt">왼쪽영역</span>
+              <span class="rt">오른쪽영역</span>
+            </div>
+            <table class="right">
+              <caption>테이블 제목 정보</caption>
+              <colgroup>
+                <col style="width:50%">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">제목</th>
+                  <th scope="col">제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>내용</td>
+                  <td>내용</td>
+                </tr>
+                <tr>
+                  <td>내용</td>
+                  <td>내용</td>
+                </tr>
+                <tr>
+                  <td>내용</td>
+                  <td>내용</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+
+      </div>
+
+    </div>
+    <footer id="footer"></footer>
+  </div>
+</body>
+</html>
