@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>guide</title>
+  <link rel="shortcut icon" href="../favicon.png">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/front.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header id="header"></header>
+    <div id="container">
+      <div class="content">
+        <div class="ttl_page">
+          <h2 class="h2">Accordion & Toggle</h2>
+        </div>
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">Accordion</h3>
+          </div>
+          <ul class="acd_wrap">
+            <li class="on">
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="true">제목 1</button></div>
+              <div class="acd_panel" role="region">
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+              </div>
+            </li>
+            <li>
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false">제목 2</button></div>
+              <div class="acd_panel" role="region">
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+              </div>
+            </li>
+            <li>
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false">제목 3</button></div>
+              <div class="acd_panel" role="region">
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">Toggle (accordion-option="toggle")</h3>
+          </div>
+          <ul class="acd_wrap" accordion-option="toggle">
+            <li class="on">
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="true">제목 1</button></div>
+              <div class="acd_panel" role="region">
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+              </div>
+            </li>
+            <li>
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false">제목 2</button></div>
+              <div class="acd_panel" role="region">
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+              </div>
+            </li>
+            <li>
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false">제목 3</button></div>
+              <div class="acd_panel" role="region">
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">제목, 버튼 분리 형</h3>
+          </div>
+          <ul class="acd_wrap" accordion-option="toggle">
+            <li class="on">
+              <div class="acd_ttl">
+                <div class="ttl">
+                  제목 1
+                </div>
+                <button type="button" class="ico" aria-expanded="true"></button>
+              </div>
+              <div class="acd_panel" role="region">
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+              </div>
+            </li>
+            <li>
+              <div class="acd_ttl">
+                <div class="ttl">
+                  제목 1
+                </div>
+                <button type="button" class="ico" aria-expanded="true"></button>
+              </div>
+              <div class="acd_panel" role="region">
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+              </div>
+            </li>
+            <li>
+              <div class="acd_ttl">
+                <div class="ttl">
+                  제목 1
+                </div>
+                <button type="button" class="ico" aria-expanded="true"></button>
+              </div>
+              <div class="acd_panel" role="region">
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+                <p>콘텐츠 영역</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+
+      </div>
+
+    </div>
+    <footer id="footer"></footer>
+  </div>
+</body>
+</html>
