@@ -183,3 +183,16 @@
 
 
 
+/* **** list **** */
+.list{margin-top:1.2rem;}
+.list li{position:relative; color:var(--fc_02, #26282c);}
+.list li + li{margin-top:1.2rem;}
+/* list dot */
+.list.dot li{padding-left:1.2rem;}
+.list.dot li::before{content:''; position:absolute; left:0; top:1rem; display:block; width:0.2rem; height:0.2rem; border-radius:1rem; background:#444;}
+/* list star */
+.list.star li{padding-left:1.2rem;}
+.list.star li::before{content:'*'; position:absolute; left:0; top:0.2rem;}
+/* list dash */
+.list.dash li{padding-left:1.2rem;}
+.list.dash li::before{content:''; position:absolute; left:0; top:1rem; display:block; width:0.6rem; height:1px; background:#888;}
