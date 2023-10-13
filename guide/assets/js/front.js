@@ -1,8 +1,9 @@
 $(()=>{
   $(document).on("click", "a[href='#']", function(e){ e.preventDefault() });
-
+  
   $tab.init();
   $accordion.init();
+  $pagination.init();
 });
 
 
@@ -22,7 +23,6 @@ const $tab = {
 
       _thisPanel.attr("tabindex", 0);
       _thisPanel.siblings().attr("tabindex", -1);
-      console.log(_this);
     })
   }
 };
@@ -57,6 +57,21 @@ const $accordion = {
         _this.parents("li").siblings().removeClass("on").find("button").attr("aria-expanded", false);
         _this.parents("li").siblings().find(".acd_panel").slideUp(100);
       }
+    })
+  }
+}
+
+
+const $pagination = {
+  init: ()=>{
+    $pagination.click();
+  },
+  click: ()=>{
+    $(document).on("click", ".pagination ul button", (e)=>{
+      const _this = $(e.target);
+      _this.attr("title", "현재 페이지")
+      _this.parents("li").addClass("on");
+      _this.parents("li").siblings().removeClass("on").find("button").removeAttr("title");
     })
   }
 }
