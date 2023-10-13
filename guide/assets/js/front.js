@@ -7,9 +7,56 @@ $(()=>{
 
 const $guide = {
   init: ()=>{
-    const guide = $(document).find("body.guide");
+    const guide = $(document).find("body#guide");
     if( !guide.length ) return;
+    $guide.setGuideId();
+    $guide.header();
+  },
+  gnb: [
+    { idx: 0, url: 'list/guide.html', title: 'guide' },
+    { idx: 1, url: 'list/common.html', title: 'common, etc' },
+    { idx: 2, url: 'list/main.html', title: 'main' },
+  ],
+  header: ()=>{
+    const guideId = $guide.setGuideId();
+
+    let HTML = `
+      <h1><a href="#">logo</a></h1>
+        <dl class="status_info">
+          <dt>진행중</dt>
+          <dd class="ing"></dd>
+          <dt>완료</dt>
+          <dd class="end"></dd>
+          <dt>수정</dt>
+          <dd class="modify"></dd>
+        </dl>
+        <nav>
+          <ul>
+      `;
+      for(i in $guide.gnb){
+        const data = $guide.gnb[i];
+        let on = (guideId == i) ? "on" : "";
+        HTML += `<li class="${on}"><a target="iframe" href="${data.url}">${data.title}</a></li>`;
+      }
+      HTML += `
+          </ul>
+      </nav>
+    `;
+    $(document).find("header#header").append(HTML);
     $guide.navLink();
+  },
+  setGuideId: ()=>{
+    let guideId = sessionStorage.getItem('guideId');
+    if( guideId == null ){
+      sessionStorage.setItem('guideId', 0);   // sessionStorage
+      guideId = 0;
+    }
+
+    const iframe = $(document).find("#iframe");
+    const url = $guide.gnb[guideId].url;
+    iframe.attr("src", url);
+
+    return guideId;
   },
   navLink: function(){
     const link = $(document).find("#header nav ul li a");
@@ -17,13 +64,17 @@ const $guide = {
     link.on("click", function(){
       link.parents("li").removeClass("on");
       $(this).parents("li").addClass("on");
+
+      const idx = $(this).parents("li").index();
+      sessionStorage.setItem("guideId", idx);   // sessionStorage
+
       $guide.iframe(iframe);
     });
   },
   status: function(elem){ // elem : iframe
     // const iframeBody = elem.contentWindow.document.body;
     const body = $(elem).contents().find("body");   // iframe in body
-    const guideTable = body.find("#guide_table");   // iframe in table
+    const guideTable = body.find(".guide_table");   // iframe in table
 
     const ing = guideTable.find("tbody tr.ing").length;
     const end = guideTable.find("tbody tr.end").length;
@@ -32,7 +83,7 @@ const $guide = {
     const per = ((end/all) * 100).toFixed(2);
 
     const HTML = `
-      <div id="guide_status">
+      <div class="guide_status">
         <div class="sort">
           <select id="sort_status">
             <option value="0">진행상태 전체</option>
@@ -82,7 +133,6 @@ const $guide = {
   },
   iframeHeight: function(elem){
     $(elem).css({"height": ""});
-    // const height = elem.contentWindow.document.body.scrollHeight;
     const height = $(elem).contents().outerHeight(true);
     $(elem).css({"height": `${height}px`});
   }

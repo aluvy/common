@@ -11,26 +11,9 @@
   <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
   <script src="./assets/js/front.js"></script>
 </head>
-<body class="guide">
+<body id="guide">
   <div class="guide_wrap">
-    <header id="header">
-      <h1><a href="#">logo</a></h1>
-      <dl class="status_info">
-        <dt>진행중</dt>
-        <dd class="ing"></dd>
-        <dt>완료</dt>
-        <dd class="end"></dd>
-        <dt>수정</dt>
-        <dd class="modify"></dd>
-      </dl>
-      <nav>
-        <ul>
-          <li class="on"><a target="iframe" href="list/guide.html">guide</a></li>
-          <li><a target="iframe" href="list/common.html">common, etc</a></li>
-          <li><a target="iframe" href="list/main.html">main</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header id="header"></header>
     <div id="guide_cont">
       <iframe src="list/guide.html" name="iframe" id="iframe" onload="$guide.iframe(this)" scrolling="no"></iframe>
     </div>
