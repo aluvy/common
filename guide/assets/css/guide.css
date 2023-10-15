@@ -41,7 +41,7 @@ body#guide {
 	.guide_table + .guide_title{margin-top:3rem;}
 
 	.guide_table{border-top:px solid #000;}
-	.guide_table tr:hover td{background:#fc69690b; border-bottom-color:#fc6969;}
+	.guide_table tr:not(.hid):hover td{background:#fc69690b; border-bottom-color:#fc6969;}
 	.guide_table th,
 	.guide_table td{font-size:1.2rem; border-bottom:1px solid #ddd; font-weight:400; padding:1rem 0.8rem;}
 	.guide_table thead th{background:#f0f0f0;}
