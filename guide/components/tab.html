@@ -23,15 +23,15 @@
           <div class="ttl_sub">
             <h3 class="h3">default</h3>
           </div>
-          <div class="tab_wrap">
+          <div class="tab_wrap" data-role="tab">
             <div class="tab_list" role="tablist">
               <ul>
-                <li><button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">tabmenu 1</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">tabmenu 2</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_3">tabmenu 3</button></li>
+                <li><button type="button" role="tab" id="tabttl_1" aria-selected="true" aria-controls="tabpanel_1">tabmenu 1</button></li>
+                <li><button type="button" role="tab" id="tabttl_2" aria-selected="false" aria-controls="tabpanel_2">tabmenu 2</button></li>
+                <li><button type="button" role="tab" id="tabttl_3" aria-selected="false" aria-controls="tabpanel_3">tabmenu 3</button></li>
               </ul>
             </div>
-            <div class="tab_panel active" role="tabpanel" id="tabpanel_1" tabindex="0">
+            <div class="tab_panel active" role="tabpanel" id="tabpanel_1" aria-labelledby="tabttl_1" tabindex="0">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 1 콘텐츠 
@@ -40,13 +40,13 @@
                 탭메뉴 1 콘텐츠 
               </div>
             </div>
-            <div class="tab_panel" role="tabpanel" id="tabpanel_2" tabindex="-1">
+            <div class="tab_panel" role="tabpanel" id="tabpanel_2" aria-labelledby="tabttl_2" tabindex="-1">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 2 콘텐츠 
               </div>
             </div>
-            <div class="tab_panel" role="tabpanel" id="tabpanel_3" tabindex="-1">
+            <div class="tab_panel" role="tabpanel" id="tabpanel_3" aria-labelledby="tabttl_3" tabindex="-1">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 3 콘텐츠 
@@ -60,17 +60,17 @@
           <div class="ttl_sub">
             <h3 class="h3">tab scroll</h3>
           </div>
-          <div class="tab_wrap">
+          <div class="tab_wrap" data-role="tab">
             <div class="tab_list scroll" role="tablist">
               <ul>
-                <li><button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">tabmenu 1</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">tabmenu 2</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_3">tabmenu 3</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_4">tabmenu 4</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_5">tabmenu 5</button></li>
+                <li><button type="button" role="tab" id="tabttl2_1" aria-selected="true" aria-controls="tabpanel2_1">tabmenu 1</button></li>
+                <li><button type="button" role="tab" id="tabttl2_2" aria-selected="false" aria-controls="tabpanel2_2">tabmenu 2</button></li>
+                <li><button type="button" role="tab" id="tabttl2_3" aria-selected="false" aria-controls="tabpanel2_3">tabmenu 3</button></li>
+                <li><button type="button" role="tab" id="tabttl2_4" aria-selected="false" aria-controls="tabpanel2_4">tabmenu 4</button></li>
+                <li><button type="button" role="tab" id="tabttl2_5" aria-selected="false" aria-controls="tabpanel2_5">tabmenu 5</button></li>
               </ul>
             </div>
-            <div class="tab_panel active" role="tabpanel" id="tabpanel_1" tabindex="0">
+            <div class="tab_panel active" role="tabpanel" id="tabpanel2_1" aria-labelledby="tabttl2_1" tabindex="0">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 1 콘텐츠 
@@ -79,25 +79,25 @@
                 탭메뉴 1 콘텐츠 
               </div>
             </div>
-            <div class="tab_panel" role="tabpanel" id="tabpanel_2" tabindex="-1">
+            <div class="tab_panel" role="tabpanel" id="tabpanel2_2" aria-labelledby="tabttl2_2" tabindex="-1">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 2 콘텐츠 
               </div>
             </div>
-            <div class="tab_panel" role="tabpanel" id="tabpanel_3" tabindex="-1">
+            <div class="tab_panel" role="tabpanel" id="tabpanel2_3" aria-labelledby="tabttl2_3" tabindex="-1">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 3 콘텐츠 
               </div>
             </div>
-            <div class="tab_panel" role="tabpanel" id="tabpanel_4" tabindex="-1">
+            <div class="tab_panel" role="tabpanel" id="tabpanel2_4" aria-labelledby="tabttl2_4" tabindex="-1">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 4 콘텐츠 
               </div>
             </div>
-            <div class="tab_panel" role="tabpanel" id="tabpanel_5" tabindex="-1">
+            <div class="tab_panel" role="tabpanel" id="tabpanel2_5" aria-labelledby="tabttl2_5" tabindex="-1">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 5 콘텐츠 
@@ -111,27 +111,27 @@
           <div class="ttl_sub">
             <h3 class="h3">tab box</h3>
           </div>
-          <div class="tab_wrap">
+          <div class="tab_wrap" data-role="tab">
             <div class="tab_list box" role="tablist">
               <ul>
-                <li><button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">tabmenu 1</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">tabmenu 2</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_3">tabmenu 3</button></li>
+                <li><button type="button" role="tab" id="tabttl3_1" aria-selected="true" aria-controls="tabpanel3_1">tabmenu 1</button></li>
+                <li><button type="button" role="tab" id="tabttl3_2" aria-selected="false" aria-controls="tabpanel3_2">tabmenu 2</button></li>
+                <li><button type="button" role="tab" id="tabttl3_3" aria-selected="false" aria-controls="tabpanel3_3">tabmenu 3</button></li>
               </ul>
             </div>
-            <div class="tab_panel active" role="tabpanel" id="tabpanel_1" tabindex="0">
+            <div class="tab_panel active" role="tabpanel" id="tabpanel3_1" aria-labelledby="tabttl3_1" tabindex="0">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 1 콘텐츠 
               </div>
             </div>
-            <div class="tab_panel" role="tabpanel" id="tabpanel_2" tabindex="-1">
+            <div class="tab_panel" role="tabpanel" id="tabpanel3_2" aria-labelledby="tabttl3_2" tabindex="-1">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 2 콘텐츠 
               </div>
             </div>
-            <div class="tab_panel" role="tabpanel" id="tabpanel_3" tabindex="-1">
+            <div class="tab_panel" role="tabpanel" id="tabpanel3_3" aria-labelledby="tabttl3_3" tabindex="-1">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 3 콘텐츠 
@@ -144,39 +144,39 @@
           <div class="ttl_sub">
             <h3 class="h3">tab in tab</h3>
           </div>
-          <div class="tab_wrap">
+          <div class="tab_wrap" data-role="tab">
             <div class="tab_list scroll" role="tablist">
               <ul>
-                <li><button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">tabmenu 1</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">tabmenu 2</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_3">tabmenu 3</button></li>
+                <li><button type="button" role="tab" id="tabttl4_1" aria-selected="true" aria-controls="tabpanel4_1">tabmenu 1</button></li>
+                <li><button type="button" role="tab" id="tabttl4_2" aria-selected="false" aria-controls="tabpanel4_2">tabmenu 2</button></li>
+                <li><button type="button" role="tab" id="tabttl4_3" aria-selected="false" aria-controls="tabpanel4_3">tabmenu 3</button></li>
               </ul>
             </div>
-            <div class="tab_panel active" role="tabpanel" id="tabpanel_1" tabindex="0">
+            <div class="tab_panel active" role="tabpanel" id="tabpanel4_1" aria-labelledby="tabttl4_1" tabindex="0">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 
-                <div class="tab_wrap">
+                <div class="tab_wrap" data-role="tab">
                   <div class="tab_list box" role="tablist">
                     <ul>
-                      <li><button type="button" role="tab" aria-selected="true" aria-controls="innerTabpanel_1">tabmenu 1</button></li>
-                      <li><button type="button" role="tab" aria-selected="false" aria-controls="innerTabpanel_2">tabmenu 2</button></li>
-                      <li><button type="button" role="tab" aria-selected="false" aria-controls="innerTabpanel_3">tabmenu 3</button></li>
+                      <li><button type="button" role="tab" id="innerTabttl_1" aria-selected="true" aria-controls="innerTabpanel_1">tabmenu 1</button></li>
+                      <li><button type="button" role="tab" id="innerTabttl_2" aria-selected="false" aria-controls="innerTabpanel_2">tabmenu 2</button></li>
+                      <li><button type="button" role="tab" id="innerTabttl_3" aria-selected="false" aria-controls="innerTabpanel_3">tabmenu 3</button></li>
                     </ul>
                   </div>
-                  <div class="tab_panel active" role="tabpanel" id="innerTabpanel_1" tabindex="0">
+                  <div class="tab_panel active" role="tabpanel" id="innerTabpanel_1" aria-labelledby="innerTabttl_1" tabindex="0">
                     <h2 class="hidden">숨은 제목</h2>
                     <div class="section">
                       탭메뉴 1 콘텐츠 
                     </div>
                   </div>
-                  <div class="tab_panel" role="tabpanel" id="innerTabpanel_2" tabindex="-1">
+                  <div class="tab_panel" role="tabpanel" id="innerTabpanel_2" aria-labelledby="innerTabttl_2" tabindex="-1">
                     <h2 class="hidden">숨은 제목</h2>
                     <div class="section">
                       탭메뉴 2 콘텐츠 
                     </div>
                   </div>
-                  <div class="tab_panel" role="tabpanel" id="innerTabpanel_3" tabindex="-1">
+                  <div class="tab_panel" role="tabpanel" id="innerTabpanel_3" aria-labelledby="innerTabttl_3" tabindex="-1">
                     <h2 class="hidden">숨은 제목</h2>
                     <div class="section">
                       탭메뉴 3 콘텐츠 
@@ -187,13 +187,13 @@
 
               </div>
             </div>
-            <div class="tab_panel" role="tabpanel" id="tabpanel_2" tabindex="-1">
+            <div class="tab_panel" role="tabpanel" id="tabpanel4_2" aria-labelledby="tabttl4_2" tabindex="-1">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 2 콘텐츠 
               </div>
             </div>
-            <div class="tab_panel" role="tabpanel" id="tabpanel_3" tabindex="-1">
+            <div class="tab_panel" role="tabpanel" id="tabpanel4_3" aria-labelledby="tabttl4_3" tabindex="-1">
               <h2 class="hidden">숨은 제목</h2>
               <div class="section">
                 탭메뉴 3 콘텐츠 

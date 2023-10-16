@@ -23,25 +23,25 @@
           <div class="ttl_sub">
             <h3 class="h3">Accordion</h3>
           </div>
-          <ul class="acd_wrap">
+          <ul class="acd_wrap" data-role="accordion-group">
             <li class="on">
-              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="true">제목 1</button></div>
-              <div class="acd_panel" role="region">
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="true" id="acdttl_1" aria-controls="acdpanel_1">제목 1</button></div>
+              <div class="acd_panel" role="region" id="acdpanel_1" aria-labelledby="acdttl_1">
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
               </div>
             </li>
             <li>
-              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false">제목 2</button></div>
-              <div class="acd_panel" role="region">
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false" id="acdttl_2" aria-controls="acdpanel_2">제목 2</button></div>
+              <div class="acd_panel" role="region" id="acdpanel_2" aria-labelledby="acdttl_2">
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
               </div>
             </li>
             <li>
-              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false">제목 3</button></div>
-              <div class="acd_panel" role="region">
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false" id="acdttl_3" aria-controls="acdpanel_3">제목 3</button></div>
+              <div class="acd_panel" role="region" id="acdpanel_3" aria-labelledby="acdttl_3">
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
@@ -55,25 +55,25 @@
           <div class="ttl_sub">
             <h3 class="h3">Toggle (accordion-option="toggle")</h3>
           </div>
-          <ul class="acd_wrap" accordion-option="toggle">
+          <ul class="acd_wrap" data-role="accordion-group" accordion-option="toggle">
             <li class="on">
-              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="true">제목 1</button></div>
-              <div class="acd_panel" role="region">
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="true" id="acdttl2_1" aria-controls="acdpanel2_1">제목 1</button></div>
+              <div class="acd_panel" role="region" id="acdpanel2_1" aria-labelledby="acdttl2_1">
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
               </div>
             </li>
             <li>
-              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false">제목 2</button></div>
-              <div class="acd_panel" role="region">
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false" id="acdttl2_2" aria-controls="acdpanel2_2">제목 2</button></div>
+              <div class="acd_panel" role="region" id="acdpanel2_2" aria-labelledby="acdttl2_2">
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
               </div>
             </li>
             <li>
-              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false">제목 3</button></div>
-              <div class="acd_panel" role="region">
+              <div class="acd_ttl"><button type="button" class="ttl" aria-expanded="false" id="acdttl2_3" aria-controls="acdpanel2_3">제목 3</button></div>
+              <div class="acd_panel" role="region" id="acdpanel2_3" aria-labelledby="acdttl2_3">
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
@@ -93,9 +93,9 @@
                 <div class="ttl">
                   제목 1
                 </div>
-                <button type="button" class="ico" aria-expanded="true"></button>
+                <button type="button" class="ico" aria-expanded="true" id="acdttl3_1" aria-controls="acdpanel3_1"></button>
               </div>
-              <div class="acd_panel" role="region">
+              <div class="acd_panel" role="region" id="acdpanel3_1" aria-labelledby="acdttl3_1">
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
               </div>
@@ -105,9 +105,9 @@
                 <div class="ttl">
                   제목 1
                 </div>
-                <button type="button" class="ico" aria-expanded="true"></button>
+                <button type="button" class="ico" aria-expanded="true" id="acdttl3_2" aria-controls="acdpanel3_2"></button>
               </div>
-              <div class="acd_panel" role="region">
+              <div class="acd_panel" role="region" id="acdpanel3_2" aria-labelledby="acdttl3_2">
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
@@ -118,9 +118,9 @@
                 <div class="ttl">
                   제목 1
                 </div>
-                <button type="button" class="ico" aria-expanded="true"></button>
+                <button type="button" class="ico" aria-expanded="true" id="acdttl3_3" aria-controls="acdpanel3_3"></button>
               </div>
-              <div class="acd_panel" role="region">
+              <div class="acd_panel" role="region" id="acdpanel3_3" aria-labelledby="acdttl3_3">
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
                 <p>콘텐츠 영역</p>
