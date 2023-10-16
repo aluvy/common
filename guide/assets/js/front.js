@@ -359,6 +359,7 @@ const $popup = {
   item: {},
   open: function(elem){
     $scroll.noScroll();
+    $(document).find(".wrap").attr('tabindex', -1);
 
     const focusBtn = $(elem);
     const popupId = $(elem).data("popup");
@@ -404,9 +405,8 @@ const $popup = {
       focusBtn.focus();
 
       delete $popup.item[popupId];
+      if( Object.keys($popup.item).length < 1 ){ $scroll.scroll(); $(document).find(".wrap").removeAttr("tabindex"); };
     }, 201);
-
-    if( Object.keys($popup.item).length < 1 ){ $scroll.scroll() };
   },
   closeAll: function(popupId){
     Object.keys($popup.item).forEach((a, i)=>{ $popup.close(a) });
