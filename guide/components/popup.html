@@ -35,6 +35,9 @@
             <button type="button" aria-haspopup="dialog" data-popup="pop_bottom_nottl" onclick="$popup.open(this)" class="btn secondary lg">bottom(제목없음) 팝업</button>
             <button type="button" aria-haspopup="dialog" data-popup="pop_bottom_tab" onclick="$popup.open(this)" class="btn secondary lg">bottom(탭) 팝업</button>
           </div>
+          <div class="mgt_sm">
+            <button type="button" aria-haspopup="dialog" data-popup="pop_full" onclick="$popup.open(this)" class="btn secondary lg">full 팝업</button>
+          </div>
         </div>
 
       </div>
@@ -136,7 +139,7 @@
       </div>
       <div class="ly_con">
         <div class="ly_cnt">
-          <!-- <div class="section"> -->
+          <!-- <div class="section"> tab_list 스크롤 고정 시 section 으로 감싸지 않음 -->
             <div class="tab_wrap">
               <div class="tab_list scroll" role="tablist">
                 <ul>
@@ -177,8 +180,6 @@
                       </div>
                     </div>
                   </div>
-
-
                 </div>
               </div>
               <div class="tab_panel" role="tabpanel" id="tabpanel_2" tabindex="-1">
@@ -194,8 +195,28 @@
                 </div>
               </div>
             </div>
+          <!-- </div> tab_list 스크롤 고정 시 section 으로 감싸지 않음  -->
+        </div>
+        <div class="ly_fix_bottom">
+          <div class="btn_group">
+            <button type="button" class="btn secondary lg" data-action="closeAll">취소</button>
+            <button type="button" class="btn primary lg" data-action="close">확인</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn_ico close" data-action="close"><span class="hidden">레이어창 닫기</span></button>
+    </div>
+  </div>
 
-          <!-- </div> -->
+
+  <div class="layer_wrap full" data-popup="pop_full" role="dialog">
+    <div class="ly_in">
+      <div class="ly_hd" tabindex="0">
+        <h1 class="pop_h1">full popup</h1>
+      </div>
+      <div class="ly_con">
+        <div class="ly_cnt">
+          <div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div>
         </div>
         <div class="ly_fix_bottom">
           <div class="btn_group">
