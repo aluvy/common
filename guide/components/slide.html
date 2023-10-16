@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>guide</title>
+  <link rel="shortcut icon" href="../favicon.png">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/front.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header id="header"></header>
+    <div id="container">
+
+      <div class="content">
+        <div class="ttl_page">
+          <h2 class="h2">Slide</h2>
+        </div>
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">Swiper</h3>
+          </div>
+          <div class="swiper guideSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" tabindex="0"><img src="../assets/images/thumb/slide1.png" alt=""></div>
+              <div class="swiper-slide" tabindex="0"><img src="../assets/images/thumb/slide2.png" alt=""></div>
+              <div class="swiper-slide" tabindex="0"><img src="../assets/images/thumb/slide3.png" alt=""></div>
+            </div>
+            <div class="swiper-button">
+              <button type="button" class="swiper-button-next"></button>
+              <button type="button" class="swiper-button-prev"></button>
+            </div>
+            <div class="swiper-pagenation-wrap">
+              <div class="swiper-pagination"></div>
+              <button type="button" class="swiper-autoplay-control" aria-pressed="false" aria-label="자동 재생 일시정지"></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <footer id="footer"></footer>
+  </div>
+
+<script>
+  $(()=>{
+    var swiper = new Swiper(".guideSwiper", {
+      slidesPerView:1,
+      autoplay: {
+        delay:3000,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<button type="button" class="${className}"><span class="blind">${index + 1}</span></button>`;
+        },
+      },
+
+      a11y: {
+        prevSlideMessage: '이전 슬라이드',
+        nextSlideMessage: '다음 슬라이드',
+        slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+      },
+      on: {
+        init: function(swiper){
+          console.log(swiper, this);
+          let thisSlide = swiper;
+          let autoPlayBtn = document.querySelector('.swiper-autoplay-control');
+
+          autoPlayBtn.addEventListener('click', (e) => {
+            let autoPlayState = autoPlayBtn.getAttribute('aria-pressed');
+
+            if (autoPlayState === 'false') {
+              autoPlayBtn.setAttribute('aria-pressed', 'true');
+              thisSlide.autoplay.stop();
+
+            } else if (autoPlayState === 'true') {
+              autoPlayBtn.setAttribute('aria-pressed', 'false');
+              thisSlide.autoplay.start();
+            };
+          });
+
+        },
+      },
+    });
+  })
+</script>
+</body>
+</html>

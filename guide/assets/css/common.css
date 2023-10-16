@@ -204,3 +204,25 @@
 .list.cnum > li{padding-left:1.6rem;}
 .list.cnum > li i{position:absolute; left:0; top:0; font-style:normal;}
 
+
+
+/* **** swiper **** */
+.guideSwiper {position:relative; width:64.3rem; height:37rem; overflow:hidden; overflow:clip; z-index:1; touch-action:pan-y;}
+.guideSwiper .swiper-wrapper {position:relative; width:100%; height:100%; z-index:1; display:flex; transition-property:transform; transition-timing-function:initial; transform:translate3d(0px, 0, 0);}
+.guideSwiper .swiper-slide{position:relative; flex-shrink:0; display:block; width:100%; height:100%; transition-property:transform;}
+.guideSwiper .swiper-button-prev,
+.guideSwiper .swiper-button-next{position:absolute; top:50%; display:flex; align-items:center; justify-content:center; width:4rem; height:4rem; margin-top:-2rem; border-radius:4rem; background:#fff; box-shadow:0 3px 5px 0 rgba(0,0,0, 0.4); z-index:10;}
+.guideSwiper .swiper-button-prev{left:0;}
+.guideSwiper .swiper-button-next{right:0;}
+.guideSwiper .swiper-button-prev::before,
+.guideSwiper .swiper-button-next::before{content:''; width:2.4rem; height:2.4rem; background:url(../images/ico/ico_arrow_24.png) -5rem 0 / 20rem auto no-repeat;}
+.guideSwiper .swiper-button-prev::before{transform:rotate(90deg);}
+.guideSwiper .swiper-button-next::before{transform:rotate(-90deg);}
+.guideSwiper .swiper-button-disabled{opacity:0.35;}
+.guideSwiper .swiper-pagenation-wrap{position:absolute; left:50%; bottom:1rem; display:flex; align-items:center; transition:.3s opacity; transform:translate3d(-50%, 0, 0); z-index:10;}
+.guideSwiper .swiper-pagination {display:flex; align-items:center;}
+.guideSwiper .swiper-autoplay-control{width:1.6rem; height:1.6rem; background:red; margin-left:0.4rem; background:url(../images/ico/ico_slide_16.png) 0 0 / 10rem auto no-repeat;}
+.guideSwiper .swiper-autoplay-control[aria-pressed="true"]{background-position:-2rem 0;}
+.guideSwiper .swiper-pagination-bullet{width:0.8rem; height:0.8rem; border-radius:1rem; background:#fff; opacity:0.3;}
+.guideSwiper .swiper-pagination-bullet + .swiper-pagination-bullet{margin-left:0.5rem;}
+.guideSwiper .swiper-pagination-bullet-active{opacity:1;}
