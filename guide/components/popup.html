@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>guide</title>
+  <link rel="shortcut icon" href="../favicon.png">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/front.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header id="header"></header>
+    <div id="container">
+
+      <div class="content">
+        <div class="ttl_page">
+          <h2 class="h2">Popup</h2>
+        </div>
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">Popup</h3>
+          </div>
+          <div>
+            <button type="button" aria-haspopup="dialog" data-popup="pop_alert" onclick="$popup.open(this)" class="btn secondary lg">alert 팝업</button>
+          </div>
+          <div class="mgt_sm">
+            <button type="button" aria-haspopup="dialog" data-popup="pop_confirm" onclick="$popup.open(this)" class="btn secondary lg">confirm 팝업</button>
+          </div>
+          <div class="mgt_sm">
+            <button type="button" aria-haspopup="dialog" data-popup="pop_bottom" onclick="$popup.open(this)" class="btn secondary lg">bottom 팝업</button>
+            <button type="button" aria-haspopup="dialog" data-popup="pop_bottom_nottl" onclick="$popup.open(this)" class="btn secondary lg">bottom(제목없음) 팝업</button>
+            <button type="button" aria-haspopup="dialog" data-popup="pop_bottom_tab" onclick="$popup.open(this)" class="btn secondary lg">bottom(탭) 팝업</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <footer id="footer"></footer>
+  </div>
+
+
+
+  <div class="layer_wrap alert" data-popup="pop_alert" role="dialog">
+    <div class="ly_in">
+      <div class="ly_hd" tabindex="0">
+        <h1 class="pop_h1">알림</h1>
+      </div>
+      <div class="ly_con">
+        <div class="ly_cnt">
+          <div class="section">알림 텍스트입니다.</div>
+        </div>
+      </div>
+      <button type="button" class="btn btn_ico close" data-action="close"><span class="hidden">레이어창 닫기</span></button>
+    </div>
+  </div>
+
+
+
+  <div class="layer_wrap confirm" data-popup="pop_confirm" role="dialog">
+    <div class="ly_in">
+      <div class="ly_hd" tabindex="0">
+        <h1 class="pop_h1">컨펌 레이어</h1>
+      </div>
+      <div class="ly_con">
+        <div class="ly_cnt">
+          <div class="section">레이어 내용</div>
+        </div>
+        <div class="ly_fix_bottom">
+          <div class="btn_group">
+            <button type="button" class="btn secondary lg" data-action="closeAll">취소</button>
+            <button type="button" class="btn primary lg" data-action="close">확인</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn_ico close" data-action="close"><span class="hidden">레이어창 닫기</span></button>
+    </div>
+  </div>
+
+
+
+  <div class="layer_wrap bottom" data-popup="pop_bottom" role="dialog">
+    <div class="ly_in">
+      <div class="ly_hd" tabindex="0">
+        <h1 class="pop_h1">바텀시트</h1>
+      </div>
+      <div class="ly_con">
+        <div class="ly_cnt">
+          <div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div>
+          <div class="section">
+            <button type="button" aria-haspopup="dialog" data-popup="pop_confirm" onclick="$popup.open(this)" class="btn secondary lg">bottom 팝업</button>
+            <button type="button" aria-haspopup="dialog" data-popup="pop_confirm" onclick="$popup.open(this)" class="btn secondary lg">confirm 팝업</button>
+          </div>
+        </div>
+        <div class="ly_fix_bottom">
+          <div class="btn_group">
+            <button type="button" class="btn secondary lg" data-action="closeAll">취소</button>
+            <button type="button" class="btn primary lg" data-action="close">확인</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn_ico close" data-action="close"><span class="hidden">레이어창 닫기</span></button>
+    </div>
+  </div>
+
+
+  <div class="layer_wrap bottom noHd" data-popup="pop_bottom_nottl" role="dialog">
+    <div class="ly_in">
+      <!-- <div class="ly_hd" tabindex="0">
+        <h1 class="pop_h1">바텀시트</h1>
+      </div> -->
+      <div class="ly_con">
+        <div class="ly_cnt">
+          <div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div><div class="section">레이어 내용<br>레이어 내용</div>
+        </div>
+        <div class="ly_fix_bottom">
+          <div class="btn_group">
+            <button type="button" class="btn secondary lg" data-action="closeAll">취소</button>
+            <button type="button" class="btn primary lg" data-action="close">확인</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn_ico close" data-action="close"><span class="hidden">레이어창 닫기</span></button>
+    </div>
+  </div>
+
+
+  <div class="layer_wrap bottom" data-popup="pop_bottom_tab" role="dialog">
+    <div class="ly_in">
+      <div class="ly_hd" tabindex="0">
+        <h1 class="pop_h1">바텀시트 탭 고정 형태</h1>
+      </div>
+      <div class="ly_con">
+        <div class="ly_cnt">
+          <!-- <div class="section"> -->
+            <div class="tab_wrap">
+              <div class="tab_list scroll" role="tablist">
+                <ul>
+                  <li><button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">tabmenu 1</button></li>
+                  <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">tabmenu 2</button></li>
+                  <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_3">tabmenu 3</button></li>
+                </ul>
+              </div>
+              <div class="tab_panel active" role="tabpanel" id="tabpanel_1" tabindex="0">
+                <h2 class="hidden">숨은 제목</h2>
+                <div class="section">
+
+
+                  <div class="tab_wrap">
+                    <div class="tab_list box" role="tablist">
+                      <ul>
+                        <li><button type="button" role="tab" aria-selected="true" aria-controls="innerTabpanel_1">tabmenu 1</button></li>
+                        <li><button type="button" role="tab" aria-selected="false" aria-controls="innerTabpanel_2">tabmenu 2</button></li>
+                        <li><button type="button" role="tab" aria-selected="false" aria-controls="innerTabpanel_3">tabmenu 3</button></li>
+                      </ul>
+                    </div>
+                    <div class="tab_panel active" role="tabpanel" id="innerTabpanel_1" tabindex="0">
+                      <h2 class="hidden">숨은 제목</h2>
+                      <div class="section">
+                        탭메뉴 1 콘텐츠 
+                      </div>
+                    </div>
+                    <div class="tab_panel" role="tabpanel" id="innerTabpanel_2" tabindex="-1">
+                      <h2 class="hidden">숨은 제목</h2>
+                      <div class="section">
+                        탭메뉴 2 콘텐츠 
+                      </div>
+                    </div>
+                    <div class="tab_panel" role="tabpanel" id="innerTabpanel_3" tabindex="-1">
+                      <h2 class="hidden">숨은 제목</h2>
+                      <div class="section">
+                        탭메뉴 3 콘텐츠 
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="tab_panel" role="tabpanel" id="tabpanel_2" tabindex="-1">
+                <h2 class="hidden">숨은 제목</h2>
+                <div class="section">
+                  탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>탭메뉴 2 콘텐츠<br>
+                </div>
+              </div>
+              <div class="tab_panel" role="tabpanel" id="tabpanel_3" tabindex="-1">
+                <h2 class="hidden">숨은 제목</h2>
+                <div class="section">
+                  탭메뉴 3 콘텐츠 
+                </div>
+              </div>
+            </div>
+
+          <!-- </div> -->
+        </div>
+        <div class="ly_fix_bottom">
+          <div class="btn_group">
+            <button type="button" class="btn secondary lg" data-action="closeAll">취소</button>
+            <button type="button" class="btn primary lg" data-action="close">확인</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn_ico close" data-action="close"><span class="hidden">레이어창 닫기</span></button>
+    </div>
+  </div>
+
+</body>
+</html>
