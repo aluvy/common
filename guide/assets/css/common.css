@@ -184,15 +184,23 @@
 
 
 /* **** list **** */
-.list{margin-top:1.2rem;}
+.list{margin-top:1.2rem; font-size:1.4rem;}
 .list li{position:relative; color:var(--fc_02, #26282c);}
-.list li + li{margin-top:1.2rem;}
+.list li + li{margin-top:0.6rem;}
 /* list dot */
-.list.dot li{padding-left:1.2rem;}
-.list.dot li::before{content:''; position:absolute; left:0; top:1rem; display:block; width:0.2rem; height:0.2rem; border-radius:1rem; background:#444;}
+.list.dot > li{padding-left:1.2rem;}
+.list.dot > li::before{content:''; position:absolute; left:0; top:0.8rem; display:block; width:0.3rem; height:0.3rem; border-radius:1rem; background:#444;}
 /* list star */
-.list.star li{padding-left:1.2rem;}
-.list.star li::before{content:'*'; position:absolute; left:0; top:0.2rem;}
+.list.star > li{padding-left:1.2rem;}
+.list.star > li::before{content:''; position:absolute; left:0; top:0.7rem; display:block; width:0.7rem; height:0.7rem; background:url(../images/ico/ico_list_star.png) 0 0 / 100% auto no-repeat;}
 /* list dash */
-.list.dash li{padding-left:1.2rem;}
-.list.dash li::before{content:''; position:absolute; left:0; top:1rem; display:block; width:0.6rem; height:1px; background:#888;}
+.list.dash > li{padding-left:1.2rem;}
+.list.dash > li::before{content:''; position:absolute; left:0; top:1rem; display:block; width:0.5rem; height:1px; background:#888;}
+/* list num */
+.list.num{counter-reset:number 0;}
+.list.num > li{padding-left:1.2rem; text-indent:-1.2rem;}
+.list.num > li::before{counter-increment:number 1; content:counter(number) '. '}
+/* cnum */
+.list.cnum > li{padding-left:1.6rem;}
+.list.cnum > li i{position:absolute; left:0; top:0; font-style:normal;}
+
