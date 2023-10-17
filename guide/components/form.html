@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>guide</title>
+  <link rel="shortcut icon" href="../favicon.png">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/front.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header id="header"></header>
+    <div id="container">
+      <div class="content">
+        <div class="ttl_page">
+          <h2 class="h2">Form</h2>
+        </div>
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">input</h3>
+          </div>
+
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">레이블명</div>
+              <button type="button" class="btn_txt link">레이블 우측 링크</button>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="title" placeholder="힌트텍스트">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                    <button type="button" class="btn btn_box">버튼</button>
+                  </div>
+                </div>
+                <div class="form_msg">
+                  <p class="tip">안내메세지</p>
+                  <p class="error">에러메시지</p>
+                  <p class="success">성공메시지</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">value 있는 상태</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="title" value="가이드" placeholder="힌트텍스트">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">비밀번호 (required)</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="password" title="title" placeholder="비밀번호를 입력해주세요" required>
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">readonly</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="title" placeholder="힌트텍스트" readonly>
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">disabled</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="title" placeholder="힌트텍스트" disabled>
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">input</h3>
+          </div>
+          
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">검색</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="검색어" placeholder="검색어를 입력하세요">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                    <button type="button" class="btn btn_search"><span class="blind">검색</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">주민등록번호</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="검색어" maxlength="8" placeholder="주민등록번호 앞 8자리">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg">
+                  <p class="tip">안내 메세지</p>
+                </div>
+              </div>
+              <div class="space">-</div>
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="검색어" maxlength="7" placeholder="주민등록번호 뒤 7자리">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg">
+                  <p class="tip">안내 메세지</p>
+                </div>
+              </div>
+            </div>
+            <div class="form_msg"></div>
+          </div>
+
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">주민등록번호</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="주민등록번호 앞 8자리" maxlength="8" placeholder="주민등록번호 앞 8자리">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+              <div class="space">-</div>
+              <div class="form_col">
+                <div class="input masking_jumin">
+                  <input type="text" title="주민등록 뒷번호 첫번째자리 입력" maxlength="1" placeholder="1">
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+            <div class="form_msg"></div>
+          </div>
+
+          
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">휴대폰번호</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="휴대폰 번호" maxlength="11" placeholder="01012341234">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">휴대폰번호</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="휴대폰번호 앞자리" maxlength="3" placeholder="010">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+              <div class="space">-</div>
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="휴대폰번호 중간자리" maxlength="4" placeholder="1234">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+              <div class="space">-</div>
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="휴대폰번호 끝자리" maxlength="4" placeholder="1234">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">휴대폰번호</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col w35">
+                <div class="select">
+                  <button type="button" class="select_btn" title="010" aria-haspopup="dialog" data-popup="pop_phone" onclick="$popup.open(this)">010</button>
+                </div>
+              </div>
+              <div class="space">-</div>
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="휴대폰번호" maxlength="8" placeholder="12341234">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+
+
+
+          
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">이메일 (직접입력)</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col w35">
+                <div class="input">
+                  <input type="text" title="ID" placeholder="아이디 입력">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+              <div class="space">@</div>
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="도메인 직접입력" placeholder="domain.co.kr">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">이메일 (도메인 선택)</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col w35">
+                <div class="input">
+                  <input type="text" title="ID" placeholder="아이디 입력">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+              <div class="space">@</div>
+              <div class="form_col">
+                <div class="select">
+                  <button type="button" class="select_btn" title="도메인 선택" aria-haspopup="dialog" data-popup="pop_email" onclick="$popup.open(this)">도메인</button>
+
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="도메인 직접입력" placeholder="domain.co.kr">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">주소</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="title" placeholder="힌트텍스트">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                    <butto type="button" class="btn btn_box">주소검색</butto>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="title" placeholder="힌트텍스트">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">날짜</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="날짜선택" placeholder="날짜선택">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                    <button type="button" class="btn btn_calendar"><span class="blind">날짜선택</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">기간</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="날짜선택" placeholder="날짜선택">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                    <button type="button" class="btn btn_calendar"><span class="blind">날짜선택</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+              <div class="space">~</div>
+              <div class="form_col">
+                <div class="input">
+                  <input type="text" title="날짜선택" placeholder="날짜선택">
+                  <div class="form_btn">
+                    <button type="button" class="btn btn_clear"><span class="blind">입력내용 초기화</span></button>
+                    <button type="button" class="btn btn_calendar"><span class="blind">날짜선택</span></button>
+                  </div>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+
+    </div>
+    <footer id="footer"></footer>
+  </div>
+
+
+  <!-- 휴대폰번호 선택 -->
+  <div class="layer_wrap bottom" data-popup="pop_phone" role="dialog">
+    <div class="ly_in">
+      <div class="ly_hd" tabindex="0">
+        <h1 class="pop_h1">휴대폰번호 앞자리</h1>
+      </div>
+      <div class="ly_con">
+        <div class="ly_cnt">
+          <div class="section">
+            010
+          </div>
+        </div>
+        <div class="ly_fix_bottom">
+          <div class="btn_group">
+            <button type="button" class="btn secondary lg" data-action="closeAll">취소</button>
+            <button type="button" class="btn primary lg" data-action="close">확인</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn_ico close" data-action="close"><span class="hidden">레이어창 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- 이메일 도메인 선택 -->
+  <div class="layer_wrap bottom" data-popup="pop_email" role="dialog">
+    <div class="ly_in">
+      <div class="ly_hd" tabindex="0">
+        <h1 class="pop_h1">도메인 선택</h1>
+      </div>
+      <div class="ly_con">
+        <div class="ly_cnt">
+          <div class="section">
+            naver
+          </div>
+        </div>
+        <div class="ly_fix_bottom">
+          <div class="btn_group">
+            <button type="button" class="btn secondary lg" data-action="closeAll">취소</button>
+            <button type="button" class="btn primary lg" data-action="close">확인</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn_ico close" data-action="close"><span class="hidden">레이어창 닫기</span></button>
+    </div>
+  </div>
+
+</body>
+</html>
