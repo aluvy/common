@@ -72,9 +72,9 @@
 .btn.round{border-radius:5rem; padding:0 2rem;}
 .btn.xs.round{border-radius:5rem;}
 /* **** button color **** */
-.btn.primary{background:#ffd338; color:#26282c;}
-.btn.secondary{background:#ebeef0; color:#26282c;}
-.btn.point{background:#696e76; color:#fff;}
+.btn.primary{background:var(--bg-primary, #ffd338); color:#26282c;}
+.btn.secondary{background:var(--bg-secondary, #ebeef0); color:#26282c;}
+.btn.point{background:var(--bg-point, #696e76); color:#fff;}
 .btn.outline{border:1px solid #8c949e; color:#26282c;}
 /* **** button disabled **** */
 .btn.primary[disabled],
