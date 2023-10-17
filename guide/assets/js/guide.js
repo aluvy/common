@@ -102,6 +102,8 @@ const $guide = {
     // const all = ing + end + modify;
     const per = ((end/all) * 100).toFixed(2);
 
+    if( body.find(".guide_status") ) body.find(".guide_status").remove();
+
     const HTML = `
       <div class="guide_status">
         <div class="sort">
