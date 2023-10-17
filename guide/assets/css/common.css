@@ -219,9 +219,10 @@
 .guideSwiper .swiper-button-prev::before{transform:rotate(90deg);}
 .guideSwiper .swiper-button-next::before{transform:rotate(-90deg);}
 .guideSwiper .swiper-button-disabled{opacity:0.35;}
-.guideSwiper .swiper-pagenation-wrap{position:absolute; left:50%; bottom:1rem; display:flex; align-items:center; transition:.3s opacity; transform:translate3d(-50%, 0, 0); z-index:10;}
+.guideSwiper .swiper-pagenation-wrap{position:absolute; left:50%; bottom:1rem; height:2.6rem; display:flex; align-items:center; transition:.3s opacity; transform:translate3d(-50%, 0, 0); background:rgba(0,0,0, 0.2); padding:0 1.4rem; border-radius:2.6rem; z-index:10;}
 .guideSwiper .swiper-pagination {display:flex; align-items:center;}
-.guideSwiper .swiper-autoplay-control{width:1.6rem; height:1.6rem; background:red; margin-left:0.4rem; background:url(../images/ico/ico_slide_16.png) 0 0 / 10rem auto no-repeat;}
+.guideSwiper .swiper-paging{margin:0.1rem 0.6rem 0 1rem; font-size:1.1rem; color:#fff;}
+.guideSwiper .swiper-autoplay-control{width:1.6rem; height:1.6rem; background:red; background:url(../images/ico/ico_slide_16.png) 0 0 / 10rem auto no-repeat;}
 .guideSwiper .swiper-autoplay-control[aria-pressed="true"]{background-position:-2rem 0;}
 .guideSwiper .swiper-pagination-bullet{width:0.8rem; height:0.8rem; border-radius:1rem; background:#fff; opacity:0.3;}
 .guideSwiper .swiper-pagination-bullet + .swiper-pagination-bullet{margin-left:0.5rem;}

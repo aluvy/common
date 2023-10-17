@@ -37,6 +37,7 @@
             </div>
             <div class="swiper-pagenation-wrap">
               <div class="swiper-pagination"></div>
+              <div class="swiper-paging"></div>
               <button type="button" class="swiper-autoplay-control" aria-pressed="false" aria-label="자동 재생 일시정지"></button>
             </div>
           </div>
@@ -52,6 +53,8 @@
   $(()=>{
     var swiper = new Swiper(".guideSwiper", {
       slidesPerView:1,
+      loop: true,
+      slideToClickedSlide: true,
       autoplay: {
         delay:3000,
       },
@@ -63,7 +66,8 @@
         el: ".swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
-          return `<button type="button" class="${className}"><span class="blind">${index + 1}</span></button>`;
+          console.log(className)
+          return `<button type="button" class="${className}"><span class="blind">${index + 1} / ${this.slides.length}</span></button>`;
         },
       },
       a11y: {
@@ -73,8 +77,6 @@
       },
       on: {
         init: function(swiper){
-          // console.log(swiper, this, swiper.realIndex);
-          // let thisSlide = swiper;
           let autoPlayBtn = document.querySelector('.swiper-autoplay-control');
           autoPlayBtn.addEventListener('click', (e) => {
             let autoPlayState = autoPlayBtn.getAttribute('aria-pressed');
@@ -89,49 +91,16 @@
             };
           });
 
-          const realIdx = swiper.realIndex;
+          const realIndex = swiper.realIndex;
           const slides = swiper.slides;
-          // slides.attr("data-swiper-slide-index", realIdx);
-          slides.forEach((elem, idx)=>{
-            $(elem).attr("data-swiper-slide-index", realIdx);
-          });
-          console.log(slides, slides[realIdx]);
+          $(document).find(".guideSwiper .swiper-paging").html(`${realIndex+1} / ${slides.length}`);
 
         },
-        // afterInit: function(swiper) {
-        //   console.log(swiper);
-        //   // realIndex
-        //     // this.$el.each(function() {
-        //     //     var _this = $(this);
-        //     //     _this.find('.swiper-slide').eq(0).attr('aria-hidden', false).siblings().attr('aria-hidden', true);
-        //     // });
-        // },
-        slideChange: function(swiper){
-          console.log('slideChange', swiper);
-        }
-
-        // transitionEnd: function() {
-        //             this.$el.find('.swiper-slide').each(function() {
-        //                 var _this = $(this);
-        //                 if (_this.is('.swiper-slide-active')) {
-        //                     _this.attr('aria-hidden', false).siblings().attr('aria-hidden', true);
-        //                 }
-        //             });
-        //             this.$el.find('.play_control .btn').off('click').on('click', function() {
-        //                 var _this = $(this);
-        //                 if(_this.is('.stop')) {
-        //                     mainSwiper.autoplay.stop();
-        //                     _this.removeClass('stop').addClass('play');
-        //                     _this.children('.hidden').text('재생');
-        //                 } else {
-        //                     mainSwiper.autoplay.start();
-        //                     _this.removeClass('play').addClass('stop');
-        //                     _this.children('.hidden').text('멈춤');
-        //                 }
-        //             });
-        //         },
-
-
+        slideChangeTransitionStart: function(swiper){
+          const realIndex = swiper.realIndex;
+          const slides = swiper.slides;
+          $(document).find(".guideSwiper .swiper-paging").html(`${realIndex+1} / ${slides.length}`);
+        },
       },
     });
   })
