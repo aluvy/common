@@ -52,9 +52,10 @@
 <script>
   $(()=>{
     var swiper = new Swiper(".guideSwiper", {
-      slidesPerView:1,
+      // slidesPerView:1,
+      // spaceBetween:0,
       loop: true,
-      slideToClickedSlide: true,
+      // slideToClickedSlide: true,
       autoplay: {
         delay:3000,
       },
@@ -66,7 +67,6 @@
         el: ".swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
-          console.log(className)
           return `<button type="button" class="${className}"><span class="blind">${index + 1} / ${this.slides.length}</span></button>`;
         },
       },

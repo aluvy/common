@@ -225,7 +225,7 @@
 .guideSwiper .swiper-autoplay-control{width:1.6rem; height:1.6rem; background:red; background:url(../images/ico/ico_slide_16.png) 0 0 / 10rem auto no-repeat;}
 .guideSwiper .swiper-autoplay-control[aria-pressed="true"]{background-position:-2rem 0;}
 .guideSwiper .swiper-pagination-bullet{width:0.8rem; height:0.8rem; border-radius:1rem; background:#fff; opacity:0.3;}
-.guideSwiper .swiper-pagination-bullet + .swiper-pagination-bullet{margin-left:0.5rem;}
+.guideSwiper .swiper-pagination-bullet + .swiper-pagination-bullet{margin-left:0.4rem;}
 .guideSwiper .swiper-pagination-bullet-active{opacity:1;}
 
 
