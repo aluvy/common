@@ -166,6 +166,14 @@
 .acd_wrap .acd_ttl button.ico{position:absolute; right:0; top:50%; margin-top:-1.2rem; display:block; width:2.4rem; height:2.4rem; background:url(../images/ico/ico_arrow_24.png) -5rem 0 / 20rem auto no-repeat;}
 .acd_wrap li.on .acd_ttl button.ico{transform:rotate(180deg);}
 
+/* single toggle */
+.toggle_wrap{margin:3.2rem 0 0;}
+.toggle_notice .toggle_tit{height:2.6rem; display:flex; align-items:center; width:fit-content; margin:0 auto;}
+.toggle_notice .toggle_tit::after{content:''; display:inline-block; width:1.4rem; height:1.4rem; background:url(../images/ico/ico_toggle.png) 0 0 / 100% auto no-repeat; margin-left:0.4rem;}
+.toggle_notice .toggle_tit[aria-expanded='true']::after{transform:rotate(180deg)}
+.toggle_detail .toggle_tit{height:2.6rem; display:flex; align-items:center; width:fit-content; margin:0 auto;}
+.toggle_detail .toggle_tit::after{content:''; display:inline-block; width:1.2rem; height:1.2rem; background:url(../images/ico/ico_arrow_12.png) -5rem 0 / 20rem auto no-repeat; margin-left:0.4rem;}
+.toggle_detail .toggle_tit[aria-expanded='true']::after{transform:rotate(180deg)}
 
 
 /* **** pagination **** */

@@ -3,6 +3,7 @@ $(()=>{
   
   $tab.init();
   $accordion.init();
+  $toggle.init();
   $pagination.init();
 });
 
@@ -59,6 +60,28 @@ const $accordion = {
         _this.parents("li").siblings().find(".acd_panel").slideUp(100);
       }
     })
+  }
+}
+
+
+
+const $toggle = {
+  init: ()=>{
+    $toggle.setup();
+    $toggle.click();
+  },
+  setup: ()=>{
+    $(document).find(".toggle_tit[aria-expanded='false'] + .toggle_panel").css({"display": "none"});
+  },
+  click: ()=>{
+    $(document).on("click", ".toggle_wrap .toggle_tit", (e)=>{
+      const _this = $(e.target);
+      const isOpen = eval(_this.attr("aria-expanded"));
+      const panel = _this.next(".toggle_panel");
+
+      (isOpen) ? panel.slideUp(100) : panel.slideDown(100);
+      _this.attr("aria-expanded", !isOpen);
+    });
   }
 }
 
