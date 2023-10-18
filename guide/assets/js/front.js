@@ -25,11 +25,11 @@ const $tab = {
 
       _thisPanel.attr("tabindex", 0);
       _thisPanel.siblings().attr("tabindex", -1);
-
-
     })
   }
 };
+
+
 
 const $accordion = {
   init: ()=>{
@@ -174,13 +174,13 @@ const $textarea = {
     $textarea.isFocus();
   },
   setup: ()=>{
-    $(document).find(".textarea.count").each((idx, a)=>{
-      const _this = $(a).find("textarea");
+    $(document).find(".textarea textarea").each((idx, a)=>{
+      const _this = $(a);
       $textarea.count(_this);
 
       if( _this.attr("readonly") == "readonly" ) _this.parents(".textarea").addClass("readonly");
       if( _this.attr("disabled") == "disabled" ) _this.parents(".textarea").addClass("disabled");
-    })
+    });
   },
   input: ()=>{
     $(document).on("input", ".textarea textarea", function(e){
@@ -207,11 +207,10 @@ const $textarea = {
   },
   count: function(elem){
     const _this = $(elem);
-    const _maxLen = (_this.attr("maxlength") * 1).toLocaleString('ko-KR');
     const _length = _this.val().length.toLocaleString('ko-KR');
-
     const isCount = _this.parents(".textarea").find(".count").length;
     if( !isCount ){
+      const _maxLen = (_this.attr("maxlength") * 1).toLocaleString('ko-KR');
       const HTML = `
         <div class="count">
           <span class="num">${_length}</span>
@@ -223,13 +222,13 @@ const $textarea = {
     } else {
       _this.parents(".textarea").find(".count").find(".num").text(_length);
     }
+
     $textarea.hasVal(_this);
   },
   hasVal: function(elem){
     const _this = $(elem);
     const _textarea = _this.parents(".textarea");
     const _confirmBtn = _this.parents(".textarea").find(".btn_confirm");  // 등록버튼
-    console.log(_confirmBtn.length);
 
     ( _this.val().length ) ? _textarea.addClass("hasVal") : _textarea.removeClass("hasVal");
     ( _this.val().length ) ? _confirmBtn.attr("disabled", false) : _confirmBtn.attr("disabled", true);
@@ -238,11 +237,10 @@ const $textarea = {
 
 
 
-
 const $popup = {
   item: {},
   open: function(elem){
-    $scroll.noScroll();
+    $scroll.block();
     $(document).find(".wrap").attr('tabindex', -1);
 
     const focusBtn = $(elem);
@@ -320,7 +318,7 @@ const $scroll = {
   scroll: ()=>{
     $("body, html").removeClass("noScroll");
   },
-  noScroll: ()=>{
+  block: ()=>{
     $("body, html").addClass("noScroll");
   }
 }

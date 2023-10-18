@@ -51,7 +51,9 @@
 .ttl_page{padding:0 2rem; margin-top:6.4rem;}
 .ttl_page:nth-of-type(1){margin-top:0;}
 .ttl_page h2{font-size:2.8rem; font-weight:700; color:var(--fc_02, #26282c);}
-.ttl_sub{margin-bottom:0.6rem;}
+/* ttl_sub */
+.ttl_sub{margin-top:2.4rem; margin-bottom:1.2rem;}
+.ttl_sub:nth-of-type(1){margin-top:0;}
 .ttl_sub .h2{font-size:2.8rem; font-weight:700; color:var(--fc_02, #26282c);}
 .ttl_sub .h3{font-size:1.8rem; font-weight:700; color:var(--fc_02, #26282c);}
 .ttl_sub .h4{font-size:1.6rem; font-weight:700; color:var(--fc_02, #26282c);}
@@ -354,7 +356,9 @@
 .form_group .form_msg .error::before{background:url(../images/ico/ico_error.png) 0 0 / 100% auto no-repeat;}
 .form_group .form_msg .success{color:#287eff;}
 .form_group .form_msg .success::before{background:url(../images/ico/ico_error.png) 0 0 / 100% auto no-repeat #287eff;}
-/* input */
+
+
+/* **** input **** */
 .input{position:relative;}
 .input input{width:100%; height:4rem; line-height:4rem; font-size:1.6rem; border-bottom:1px solid #d6d6d6;}
 .input input[disabled],
@@ -386,7 +390,8 @@
 .input .btn_search{width:2.6rem; height:2.6rem; background:url(../images/ico/ico_search.png) 50% 50% / 2rem auto no-repeat;}
 .input .btn_calendar{width:2.6rem; height:2.6rem; background:url(../images/ico/ico_calendar.png) 50% 50% / 2rem auto no-repeat;}
 
-/* textarea */
+
+/* **** textarea **** */
 .textarea{position:relative; border:1px solid #ddd;}
 .textarea.focus:not(.readonly){border-color:var(--fc_02, #26282c);}
 .textarea.disabled,
@@ -407,7 +412,8 @@
 .textarea.auto_height.count.hasVal{padding-bottom:3rem;}
 .textarea.auto_height.count.hasVal .count{display:block;}
 
-/* select */
+
+/* **** select **** */
 .select{position:relative;}
 .select .select_btn{display:block; width:100%; height:4rem; line-height:4rem; font-size:1.6rem; text-align:left; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; border-bottom:1px solid #d6d6d6;}
 .select .select_btn::after{display:inline-block; position:absolute; right:.8rem; top:50%; z-index:1; content:''; width:.9rem; height:.9rem; margin-top:-.8rem; border-left:1px solid var(--fc_05, #8c949e); border-bottom:1px solid var(--fc_05, #8c949e); transform: rotate(-45deg);}
@@ -417,3 +423,31 @@
 .select.focus::after,
 .select.hasVal::after{width:100%;}
 .select.focus .select_btn::after{transform:rotate(135deg); margin-top:-0.4rem;}
+
+
+
+/* **** radio **** */
+/* .radio_group{} */
+.radio_group + .radio_group{margin-top:3.2rem;}
+.radio_group.flex{display:flex; flex-wrap:nowrap; align-items:flex-start;}
+.radio_group.block{display:block;}
+.radio_item{position:relative;}
+
+/* radio dot */
+.radio_group.block .radio_item.dot + .radio_item{margin-top:1.2rem;}
+.radio_group.flex .radio_item.dot{margin-right:2.4rem;}
+.radio_item.dot input{position:absolute; clip:rect(0 0 0 0); width:1px; height:1px; margin:-1px; padding:0; border:0; overflow:hidden; white-space:nowrap;}
+.radio_item.dot label{position:relative; display:block; font-size:1.6rem; line-height:1.4; padding-left:2.8rem;}
+.radio_item.dot label::before{content:''; position:absolute; left:0; top:0.1rem; display:block; width:2rem; height:2rem; border-radius:2.4rem; border:2px solid #ccc; background:#ccc; box-shadow:inset 0 0 0 3px rgba(255,255,255, 1); box-sizing:border-box;}
+.radio_item.dot input:disabled + label{color:#999;}
+.radio_item.dot input:disabled + label::before{opacity:0.5}
+.radio_item.dot input:checked + label::before{border-color:#ffcc00; background-color:#ffcc00;}
+.radio_item.dot label em{font-size:1.3rem;}
+/* radio box */
+.radio_item.box{}
+.radio_item.box input{position:absolute; clip:rect(0 0 0 0); width:1px; height:1px; margin:-1px; padding:0; border:0; overflow:hidden; white-space:nowrap;}
+.radio_item.box label{display:block; border:1px solid #ccc; text-align:center;}
+/* radio img */
+.radio_item.img{}
+.radio_item.img input{}
+.radio_item.img label{}

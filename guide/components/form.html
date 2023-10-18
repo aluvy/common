@@ -461,7 +461,7 @@
 
         <div class="section">
           <div class="ttl_sub">
-            <h3 class="h3">textarea single</h3>
+            <h4 class="h4">single</h4>
           </div>
 
           <div class="textarea">
@@ -475,12 +475,14 @@
               <span class="total">1,000</span>
             </div> -->
           </div>
-        </div>
 
+          <div class="textarea">
+            <textarea class="textarea" placeholder="내용을 입력해주세요" maxlength="1000" readonly></textarea>
+          </div>
 
-        <div class="section">
+          
           <div class="ttl_sub">
-            <h3 class="h3">textarea (form_group)</h3>
+            <h4 class="h4">form_group</h4>
           </div>
 
           <div class="form_group">
@@ -505,6 +507,21 @@
               <div class="form_col">
                 <div class="textarea auto_height count">
                   <textarea class="textarea" placeholder="내용을 입력해주세요" maxlength="1234"></textarea>
+                  <button type="button" class="btn btn_confirm">등록</button>
+                </div>
+                <div class="form_msg"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form_group">
+            <div class="form_ttl">
+              <div class="label">textarea autoHeight</div>
+            </div>
+            <div class="form_row">
+              <div class="form_col">
+                <div class="textarea auto_height count">
+                  <textarea class="textarea" placeholder="내용을 입력해주세요" maxlength="100">내용입력</textarea>
                   <button type="button" class="btn btn_confirm">등록</button>
                 </div>
                 <div class="form_msg"></div>
@@ -540,16 +557,28 @@
             </div>
           </div>
 
+
         </div>
 
         
         <div class="ttl_page">
-          <h2 class="h2">Form - etc</h2>
+          <h2 class="h2">select</h2>
         </div>
 
         <div class="section">
           <div class="ttl_sub">
-            <h3 class="h3">select btn</h3>
+            <h3 class="h3">select_btn</h3>
+          </div>
+          
+          <div class="ttl_sub">
+            <h4 class="h4">single</h4>
+          </div>
+          <div class="select">
+            <button type="button" class="select_btn" title="010" aria-haspopup="dialog" data-popup="pop_phone" onclick="$popup.open(this)">010</button>
+          </div>
+          
+          <div class="ttl_sub">
+            <h4 class="h4">form_group</h4>
           </div>
           <div class="form_group">
             <div class="form_ttl">
@@ -566,33 +595,106 @@
 
         </div>
 
+        
+
+        
+
+
+        <div class="ttl_page">
+          <h2 class="h2">radio</h2>
+        </div>
+
         <div class="section">
           <div class="ttl_sub">
-            <h3 class="h3">radio & select</h3>
+            <h3 class="h3">radio_item dot</h3>
           </div>
 
-          <div class="form_group">
-            <div class="form_row">
-              <div class="form_col">
-                radio
-                <!-- <div class="select">
-                  <button type="button" class="select_btn" title="010" aria-haspopup="dialog" data-popup="pop_phone" onclick="$popup.open(this)">010</button>
-                </div> -->
-              </div>
+          <div class="ttl_sub">
+            <h4 class="h4">flex</h4>
+          </div>
+          <div class="radio_group flex">
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot1_1" name="dot_group1">
+              <label for="radioDot1_1">항목1</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot1_2" name="dot_group1">
+              <label for="radioDot1_2">항목2</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot1_3" name="dot_group1" disabled>
+              <label for="radioDot1_3">비활성화</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot1_4" name="dot_group1" checked disabled>
+              <label for="radioDot1_4">비활성화(checked)</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot1_5" name="dot_group1">
+              <label for="radioDot1_5"><span class="hidden">단독사용</span></label>
             </div>
           </div>
 
-          <div class="form_group">
-            <div class="form_row">
-              <div class="form_col">
-                select
-                <!-- <div class="select">
-                  <button type="button" class="select_btn" title="010" aria-haspopup="dialog" data-popup="pop_phone" onclick="$popup.open(this)">010</button>
-                </div> -->
-              </div>
+          <div class="ttl_sub">
+            <h4 class="h4">block</h4>
+          </div>
+          <div class="radio_group block">
+            <div class="radio_item dot">
+              <input type="radio" id="radio1" name="dot_group2">
+              <label for="radio1">항목1</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radio2" name="dot_group2">
+              <label for="radio2">
+                <strong>항목2</strong>
+              </label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radio3" name="dot_group2">
+              <label for="radio3">
+                <strong>항목3</strong><br>
+                <em>항목 3에 대한 설명입니다.</em>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">radio_item box</h3>
+          </div>
+
+          <div class="radio_group block">
+            <div class="radio_item box">
+              <input type="radio" id="radio1" name="box_group1">
+              <label for="radio1">항목1</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radio2" name="box_group1">
+              <label for="radio2">
+                <strong>항목2</strong>
+              </label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radio3" name="box_group1">
+              <label for="radio3">
+                <strong>항목3</strong><br>
+                <em>항목 3에 대한 설명입니다.</em>
+              </label>
             </div>
           </div>
 
+        </div>
+
+
+        <div class="ttl_page">
+          <h2 class="h2">checkbox</h2>
+        </div>
+
+        <div class="section">
+          <div class="ttl_sub">
+            <h3 class="h3">checkbox</h3>
+          </div>
         </div>
 
         <div class="section">
