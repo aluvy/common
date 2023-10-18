@@ -6,6 +6,7 @@ $(()=>{
   $toggle.init();
   $pagination.init();
   $input.init();
+  $textarea.init();
 });
 
 
@@ -103,18 +104,6 @@ const $pagination = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 const $input = {
   init: ()=>{
     $input.setup();
@@ -128,22 +117,23 @@ const $input = {
       $input.hasVal(_this);
 
       if( _this.attr("required") == "required" ) _this.parents(".form_group").addClass("required");
-      
+      if( _this.attr("readonly") == "readonly" ) _this.parents(".input").addClass("readonly");
+      if( _this.attr("disabled") == "disabled" ) _this.parents(".input").addClass("disabled");
     });
   },
   input: ()=>{
-    $(document).on("input", ".form_group .input input", function(e){
+    $(document).on("input", ".input input", function(e){
       const _this = $(e.target);
       $input.hasVal(_this);
     })
   },
   isFocus: function(){
-    $(document).on("focus", ".form_group .input input", function(e){
+    $(document).on("focus", ".input input", function(e){
       const _this = $(e.target);
       const _input = _this.parents(".input");
       _input.addClass("focus");
     })
-    $(document).on("blur", ".form_group .input input", function(e){
+    $(document).on("blur", ".input input", function(e){
       const _this = $(e.target);
       const _input = _this.parents(".input");
       
@@ -152,7 +142,7 @@ const $input = {
     })
   },
   hasVal: function(elem){
-    const _this = elem;
+    const _this = $(elem);
     const _input = _this.parents(".input");
     const _formBtn = _input.find(".form_btn");
 
@@ -166,13 +156,84 @@ const $input = {
     (_this.val().length) ? _input.addClass("hasVal") : _input.removeClass("hasVal");
   },
   clear: function(){
-    $(document).on("click", ".form_group .input .btn_clear", function(e){
+    $(document).on("click", ".input .btn_clear", function(e){
       const _this = $(e.target);
       const _input = _this.parents(".input").find("input");
       _input.val("").focus();
       $input.hasVal(_input);
     })
   }
+}
+
+
+
+const $textarea = {
+  init: ()=>{
+    $textarea.setup();
+    $textarea.input();
+    $textarea.isFocus();
+  },
+  setup: ()=>{
+    $(document).find(".textarea.count").each((idx, a)=>{
+      const _this = $(a).find("textarea");
+      $textarea.count(_this);
+
+      if( _this.attr("readonly") == "readonly" ) _this.parents(".textarea").addClass("readonly");
+      if( _this.attr("disabled") == "disabled" ) _this.parents(".textarea").addClass("disabled");
+    })
+  },
+  input: ()=>{
+    $(document).on("input", ".textarea textarea", function(e){
+      const _this = $(e.target);
+      $textarea.count(_this);
+      $textarea.autoHeight(_this);
+    });
+  },
+  isFocus: ()=>{
+    $(document).on("focus", ".textarea textarea", function(e){
+      const _this = $(e.target);
+      _this.parents(".textarea").addClass("focus");
+    });
+    $(document).on("blur", ".textarea textarea", function(e){
+      const _this = $(e.target);
+      _this.parents(".textarea").removeClass("focus");
+    });
+  },
+  autoHeight: function(elem){
+    const _this = $(elem);
+    _this.removeAttr("style");
+    const scrollH = _this.prop('scrollHeight') * 0.1;
+    _this.css({ "height": `${scrollH}rem` });
+  },
+  count: function(elem){
+    const _this = $(elem);
+    const _maxLen = (_this.attr("maxlength") * 1).toLocaleString('ko-KR');
+    const _length = _this.val().length.toLocaleString('ko-KR');
+
+    const isCount = _this.parents(".textarea").find(".count").length;
+    if( !isCount ){
+      const HTML = `
+        <div class="count">
+          <span class="num">${_length}</span>
+          <span class="total">${_maxLen}</span>
+        </div>
+      `;
+      _this.parents(".textarea.count").append(HTML);
+
+    } else {
+      _this.parents(".textarea").find(".count").find(".num").text(_length);
+    }
+    $textarea.hasVal(_this);
+  },
+  hasVal: function(elem){
+    const _this = $(elem);
+    const _textarea = _this.parents(".textarea");
+    const _confirmBtn = _this.parents(".textarea").find(".btn_confirm");  // 등록버튼
+    console.log(_confirmBtn.length);
+
+    ( _this.val().length ) ? _textarea.addClass("hasVal") : _textarea.removeClass("hasVal");
+    ( _this.val().length ) ? _confirmBtn.attr("disabled", false) : _confirmBtn.attr("disabled", true);
+  },
 }
 
 
