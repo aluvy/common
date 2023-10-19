@@ -353,11 +353,11 @@ hr.hr_divide{padding:0; margin:6.5rem 0; border:0 none; height:1rem; background:
 .form_group .form_msg p{position:relative; font-size:1.2rem; padding-left:1.6rem; margin-top:0.8rem;}
 .form_group .form_msg p + p{margin-top:0.4rem;}
 .form_group .form_msg p::before{content:''; position:absolute; left:0; top:0.2rem; display:block; width:1.2rem; height:1.2rem; border-radius:1.2rem;}
-.form_group .form_msg .tip::before{background:url(../images/ico/ico_tip.png) 0 0 / 100% auto no-repeat;}
+.form_group .form_msg .tip::before{background:url(../images/ico/spr_12.png) -5rem -5rem / 50rem auto no-repeat;}
 .form_group .form_msg .error{color:red;}
-.form_group .form_msg .error::before{background:url(../images/ico/ico_error.png) 0 0 / 100% auto no-repeat;}
+.form_group .form_msg .error::before{background:url(../images/ico/spr_12.png) 0 -5rem / 50rem auto no-repeat;}
 .form_group .form_msg .success{color:#287eff;}
-.form_group .form_msg .success::before{background:url(../images/ico/ico_error.png) 0 0 / 100% auto no-repeat #287eff;}
+.form_group .form_msg .success::before{background:url(../images/ico/spr_12.png) -10rem -5rem / 50rem auto no-repeat;}
 
 
 /* **** input **** */
