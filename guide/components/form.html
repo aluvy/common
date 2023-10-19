@@ -9,6 +9,19 @@
   <link rel="stylesheet" href="../assets/css/common.css">
   <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
   <script src="../assets/js/front.js"></script>
+  <style>
+    .ttl_page{display:flex; align-items:center; justify-content:space-between;}
+    .ttl_page h2{margin-right:auto;}
+  </style>
+  <script>
+    const toggle = function(elem){
+      const _this = $(elem);
+      const _section = _this.parents(".ttl_page").next(".section");
+
+      ( $(_section).css("display") == "block" ) ? _this.html("열기") : _this.html("닫기");
+      ( $(_section).css("display") == "block" ) ? _section.slideUp(100) : _section.slideDown(100);
+    }
+  </script>
 </head>
 <body>
   <div class="wrap">
@@ -19,9 +32,15 @@
           <h2 class="h2">Form</h2>
         </div>
 
+        
+        <div class="ttl_page">
+          <h2 class="h2">input</h2>
+          <button type="button" class="guide_formbtn btn secondary xs" onclick="toggle(this)">닫기</button>
+        </div>
+
         <div class="section">
           <div class="ttl_sub">
-            <h3 class="h3">input single</h3>
+            <h3 class="h3">single</h3>
           </div>
           <div class="input">
             <input type="text" title="title" placeholder="힌트텍스트">
@@ -30,13 +49,11 @@
               <button type="button" class="btn btn_box">버튼</button>
             </div>
           </div>
-        </div>
 
-        <div class="section">
+
           <div class="ttl_sub">
-            <h3 class="h3">input (form_group)</h3>
+            <h3 class="h3">form group</h3>
           </div>
-
           <div class="form_group">
             <div class="form_ttl">
               <div class="label">레이블명</div>
@@ -147,11 +164,9 @@
               </div>
             </div>
           </div>
+          
 
-        </div>
 
-
-        <div class="section">
           <div class="ttl_sub">
             <h3 class="h3">input component</h3>
           </div>
@@ -455,13 +470,17 @@
         </div>
 
         
+        <hr class="hr_divide">
+
+
         <div class="ttl_page">
           <h2 class="h2">textarea</h2>
+          <button type="button" class="guide_formbtn btn secondary xs" onclick="toggle(this)">닫기</button>
         </div>
 
         <div class="section">
           <div class="ttl_sub">
-            <h4 class="h4">single</h4>
+            <h3 class="h3">single</h3>
           </div>
 
           <div class="textarea">
@@ -482,9 +501,8 @@
 
           
           <div class="ttl_sub">
-            <h4 class="h4">form_group</h4>
+            <h3 class="h3">form_group</h>
           </div>
-
           <div class="form_group">
             <div class="form_ttl">
               <div class="label">textarea</div>
@@ -556,18 +574,20 @@
               </div>
             </div>
           </div>
-
-
         </div>
+
+
+        <hr class="hr_divide">
 
         
         <div class="ttl_page">
           <h2 class="h2">select</h2>
+          <button type="button" class="guide_formbtn btn secondary xs" onclick="toggle(this)">닫기</button>
         </div>
 
         <div class="section">
           <div class="ttl_sub">
-            <h3 class="h3">select_btn</h3>
+            <h3 class="h3">select_btn (width popup)</h3>
           </div>
           
           <div class="ttl_sub">
@@ -597,11 +617,13 @@
 
         
 
+        <hr class="hr_divide">
         
 
 
         <div class="ttl_page">
           <h2 class="h2">radio</h2>
+          <button type="button" class="guide_formbtn btn secondary xs" onclick="toggle(this)">닫기</button>
         </div>
 
         <div class="section">
@@ -610,85 +632,298 @@
           </div>
 
           <div class="ttl_sub">
-            <h4 class="h4">flex</h4>
+            <h4 class="h4">block (gap_xs)</h4>
           </div>
-          <div class="radio_group flex">
+          <div class="radio_group block gap_xs">
             <div class="radio_item dot">
-              <input type="radio" id="radioDot1_1" name="dot_group1">
+              <input type="radio" id="radio1" name="dot_group1">
+              <label for="radio1">항목1</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radio2" name="dot_group1">
+              <label for="radio2">
+                <strong>항목2</strong>
+              </label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radio3" name="dot_group1">
+              <label for="radio3">
+                <strong>항목3</strong><br>
+                <em>항목 3에 대한 설명입니다.</em>
+              </label>
+            </div>
+          </div>
+
+          <div class="ttl_sub">
+            <h4 class="h4">flex (gap_sm)</h4>
+          </div>
+          <div class="radio_group flex gap_sm">
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot1_1" name="dot_group2">
               <label for="radioDot1_1">항목1</label>
             </div>
             <div class="radio_item dot">
-              <input type="radio" id="radioDot1_2" name="dot_group1">
+              <input type="radio" id="radioDot1_2" name="dot_group2">
               <label for="radioDot1_2">항목2</label>
             </div>
             <div class="radio_item dot">
-              <input type="radio" id="radioDot1_3" name="dot_group1" disabled>
+              <input type="radio" id="radioDot1_3" name="dot_group2" disabled>
               <label for="radioDot1_3">비활성화</label>
             </div>
             <div class="radio_item dot">
-              <input type="radio" id="radioDot1_4" name="dot_group1" checked disabled>
+              <input type="radio" id="radioDot1_4" name="dot_group2" checked disabled>
               <label for="radioDot1_4">비활성화(checked)</label>
             </div>
             <div class="radio_item dot">
-              <input type="radio" id="radioDot1_5" name="dot_group1">
+              <input type="radio" id="radioDot1_5" name="dot_group2">
               <label for="radioDot1_5"><span class="hidden">단독사용</span></label>
             </div>
           </div>
 
           <div class="ttl_sub">
-            <h4 class="h4">block</h4>
+            <h4 class="h4">flex col2 (gap_md)</h4>
           </div>
-          <div class="radio_group block">
+          <div class="radio_group flex col2 gap_md">
             <div class="radio_item dot">
-              <input type="radio" id="radio1" name="dot_group2">
-              <label for="radio1">항목1</label>
+              <input type="radio" id="radioDot3_1" name="dot_group3">
+              <label for="radioDot3_1">항목1</label>
             </div>
             <div class="radio_item dot">
-              <input type="radio" id="radio2" name="dot_group2">
-              <label for="radio2">
-                <strong>항목2</strong>
-              </label>
+              <input type="radio" id="radioDot3_2" name="dot_group3">
+              <label for="radioDot3_2">항목2</label>
             </div>
             <div class="radio_item dot">
-              <input type="radio" id="radio3" name="dot_group2">
-              <label for="radio3">
-                <strong>항목3</strong><br>
-                <em>항목 3에 대한 설명입니다.</em>
-              </label>
+              <input type="radio" id="radioDot3_3" name="dot_group3">
+              <label for="radioDot3_3">항목3</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot3_4" name="dot_group3">
+              <label for="radioDot3_4">항목4</label>
             </div>
           </div>
-        </div>
 
-        <div class="section">
+          <div class="ttl_sub">
+            <h4 class="h4">flex col3 (gap_lg)</h4>
+          </div>
+          <div class="radio_group flex col3 gap_lg">
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot4_1" name="dot_group4">
+              <label for="radioDot4_1">항목1</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot4_2" name="dot_group4">
+              <label for="radioDot4_2">항목2</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot4_3" name="dot_group4">
+              <label for="radioDot4_3">항목3</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot4_4" name="dot_group4">
+              <label for="radioDot4_4">항목4</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot4_5" name="dot_group4">
+              <label for="radioDot4_5">항목5</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot4_6" name="dot_group4">
+              <label for="radioDot4_6">항목6</label>
+            </div>
+          </div>
+
+          <div class="ttl_sub">
+            <h4 class="h4">flex col3 (gap_xl)</h4>
+          </div>
+          <div class="radio_group flex col4 gap_xl">
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot5_1" name="dot_group5">
+              <label for="radioDot5_1">항목1</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot5_2" name="dot_group5">
+              <label for="radioDot5_2">항목2</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot5_3" name="dot_group5">
+              <label for="radioDot5_3">항목3</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot5_4" name="dot_group5">
+              <label for="radioDot5_4">항목4</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot5_5" name="dot_group5">
+              <label for="radioDot5_5">항목5</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot5_6" name="dot_group5">
+              <label for="radioDot5_6">항목6</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot5_7" name="dot_group5">
+              <label for="radioDot5_7">항목7</label>
+            </div>
+            <div class="radio_item dot">
+              <input type="radio" id="radioDot5_8" name="dot_group5">
+              <label for="radioDot5_8">항목8</label>
+            </div>
+          </div>
+          
+
+
+
           <div class="ttl_sub">
             <h3 class="h3">radio_item box</h3>
           </div>
-
+          
+          <div class="ttl_sub">
+            <h4 class="h4">block</h4>
+          </div>
           <div class="radio_group block">
             <div class="radio_item box">
-              <input type="radio" id="radio1" name="box_group1">
-              <label for="radio1">항목1</label>
+              <input type="radio" id="radioBox1_1" name="box_group1">
+              <label for="radioBox1_1">항목1</label>
             </div>
             <div class="radio_item box">
-              <input type="radio" id="radio2" name="box_group1">
-              <label for="radio2">
-                <strong>항목2</strong>
-              </label>
+              <input type="radio" id="radioBox1_2" name="box_group1">
+              <label for="radioBox1_2">항목2</label>
             </div>
             <div class="radio_item box">
-              <input type="radio" id="radio3" name="box_group1">
-              <label for="radio3">
-                <strong>항목3</strong><br>
-                <em>항목 3에 대한 설명입니다.</em>
-              </label>
+              <input type="radio" id="radioBox1_3" name="box_group1" disabled>
+              <label for="radioBox1_3">비활성화</label>
             </div>
           </div>
 
-        </div>
+          <div class="ttl_sub">
+            <h4 class="h4">flex col2</h4>
+          </div>
+          <div class="radio_group flex col2">
+            <div class="radio_item box">
+              <input type="radio" id="radioBox2_1" name="box_group2">
+              <label for="radioBox2_1">항목1</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox2_2" name="box_group2">
+              <label for="radioBox2_2">항목2</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox2_3" name="box_group2">
+              <label for="radioBox2_3">항목3</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox2_4" name="box_group2">
+              <label for="radioBox2_4">항목4</label>
+            </div>
+          </div>
+
+
+          <div class="ttl_sub">
+            <h4 class="h4">flex col3 (gap_xs)</h4>
+          </div>
+          <div class="radio_group flex col3 gap_xs">
+            <div class="radio_item box">
+              <input type="radio" id="radioBox3_1" name="box_group3">
+              <label for="radioBox3_1">항목1</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox3_2" name="box_group3">
+              <label for="radioBox3_2">항목2</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox3_3" name="box_group3">
+              <label for="radioBox3_3">항목3</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox3_4" name="box_group3">
+              <label for="radioBox3_4">항목4</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox3_5" name="box_group3">
+              <label for="radioBox3_5">항목5</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox3_6" name="box_group3">
+              <label for="radioBox3_6">항목6</label>
+            </div>
+          </div>
+
+          <div class="ttl_sub">
+            <h4 class="h4">flex col4 (gap_sm)</h4>
+          </div>
+          <div class="radio_group flex col4 gap_sm">
+            <div class="radio_item box">
+              <input type="radio" id="radioBox4_1" name="box_group4">
+              <label for="radioBox4_1">항목1</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox4_2" name="box_group4" disabled>
+              <label for="radioBox4_2">항목2</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox4_3" name="box_group4">
+              <label for="radioBox4_3">항목3</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox4_4" name="box_group4">
+              <label for="radioBox4_4">항목4</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox4_5" name="box_group4">
+              <label for="radioBox4_5">항목5</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox4_6" name="box_group4">
+              <label for="radioBox4_6">항목6</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox4_7" name="box_group4">
+              <label for="radioBox4_7">항목7</label>
+            </div>
+            <div class="radio_item box">
+              <input type="radio" id="radioBox4_8" name="box_group4">
+              <label for="radioBox4_8">항목8</label>
+            </div>
+          </div>
+
+
+
+          
+          <div class="ttl_sub">
+            <h3 class="h3">radio_group etc</h3>
+          </div>
+
+          <div class="ttl_sub">
+            <h4 class="h4">class="radio_group {class명}"</h4>
+          </div>
+          <div class="radio_group type_check">
+            <div class="radio_item">
+              <input type="radio" id="radioEtc1_1" name="etc_group1">
+              <label for="radioEtc1_1"><span>번호이동</span></label>
+            </div>
+            <div class="radio_item">
+              <input type="radio" id="radioEtc1_2" name="etc_group1">
+              <label for="radioEtc1_2"><span>신규가입</span></label>
+            </div>
+            <div class="radio_item">
+              <input type="radio" id="radioEtc1_3" name="etc_group1">
+              <label for="radioEtc1_3"><span>번호이동</span><em>신규가입 설명</em></label>
+            </div>
+            <div class="radio_item">
+              <input type="radio" id="radioEtc1_4" name="etc_group1">
+              <label for="radioEtc1_4"><span>신규가입</span><em>신규가입 설명</em></label>
+            </div>
+          </div>
+        </div><!-- radio-->
+
+
+
+        <hr class="hr_divide">
 
 
         <div class="ttl_page">
           <h2 class="h2">checkbox</h2>
+          <button type="button" class="guide_formbtn btn secondary xs" onclick="toggle(this)">닫기</button>
         </div>
 
         <div class="section">
@@ -697,10 +932,21 @@
           </div>
         </div>
 
+
+
+        
+
+
+
+        <hr class="hr_divide">
+
+
+        <div class="ttl_page">
+          <h2 class="h2">switch</h2>
+          <button type="button" class="guide_formbtn btn secondary xs" onclick="toggle(this)">닫기</button>
+        </div>
+
         <div class="section">
-          <div class="ttl_sub">
-            <h3 class="h3">switch</h3>
-          </div>
 
           <div class="form_group">
             <div class="form_row">
@@ -732,7 +978,30 @@
       <div class="ly_con">
         <div class="ly_cnt">
           <div class="section">
-            010
+            
+            <div class="radio_group block gap_lg">
+              <div class="radio_item dot">
+                <input type="radio" id="phone1" name="phone_group">
+                <label for="phone1">010</label>
+              </div>
+              <div class="radio_item dot">
+                <input type="radio" id="phone1" name="phone_group">
+                <label for="phone1">011</label>
+              </div>
+              <div class="radio_item dot">
+                <input type="radio" id="phone1" name="phone_group">
+                <label for="phone1">016</label>
+              </div>
+              <div class="radio_item dot">
+                <input type="radio" id="phone1" name="phone_group">
+                <label for="phone1">017</label>
+              </div>
+              <div class="radio_item dot">
+                <input type="radio" id="phone1" name="phone_group">
+                <label for="phone1">019</label>
+              </div>
+            </div>
+
           </div>
         </div>
         <div class="ly_fix_bottom">
@@ -755,7 +1024,30 @@
       <div class="ly_con">
         <div class="ly_cnt">
           <div class="section">
-            naver
+
+            <div class="radio_group block gap_lg">
+              <div class="radio_item dot">
+                <input type="radio" id="email1" name="email_group">
+                <label for="email1">naver.com</label>
+              </div>
+              <div class="radio_item dot">
+                <input type="radio" id="email2" name="email_group">
+                <label for="email2">kakao.com</label>
+              </div>
+              <div class="radio_item dot">
+                <input type="radio" id="email3" name="email_group">
+                <label for="email3">daum.com</label>
+              </div>
+              <div class="radio_item dot">
+                <input type="radio" id="email4" name="email_group">
+                <label for="email4">hanmail.com</label>
+              </div>
+              <div class="radio_item dot">
+                <input type="radio" id="email5" name="email_group">
+                <label for="email5">google.com</label>
+              </div>
+            </div>
+
           </div>
         </div>
         <div class="ly_fix_bottom">
