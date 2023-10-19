@@ -428,6 +428,15 @@ hr.hr_divide{padding:0; margin:6.5rem 0; border:0 none; height:1rem; background:
 
 
 
+:root {
+  /* radio, checkbox gap */
+  --gap_xs: 2px;
+  --gap_sm: 4px;
+  --gap_md: 8px;
+  --gap_lg: 12px;
+  --gap_xl: 16px;
+}
+
 /* **** radio **** */
 .radio_group + .radio_group{margin-top:3.2rem;}
 .radio_group.block{display:block;}
@@ -437,18 +446,17 @@ hr.hr_divide{padding:0; margin:6.5rem 0; border:0 none; height:1rem; background:
 .radio_group.flex.col3 .radio_item{flex:0 0 33.333%; max-width:33.333%;}
 .radio_group.flex.col4 .radio_item{flex:0 0 25%; max-width:25%;}
 /* gap */
-:root {
-  --gap_xs: 2px;
-  --gap_sm: 4px;
-  --gap_md: 8px;
-  --gap_lg: 12px;
-  --gap_xl: 16px;
-}
 .radio_group.block.gap_xs .radio_item + .radio_item{margin-top:calc( var(--gap_xs) * 2 );}
 .radio_group.block.gap_sm .radio_item + .radio_item{margin-top:calc( var(--gap_sm) * 2 );}
 .radio_group.block.gap_md .radio_item + .radio_item{margin-top:calc( var(--gap_md) * 2 );}
 .radio_group.block.gap_lg .radio_item + .radio_item{margin-top:calc( var(--gap_lg) * 2 );}
 .radio_group.block.gap_xl .radio_item + .radio_item{margin-top:calc( var(--gap_xl) * 2 );}
+
+.radio_group.flex.gap_xs:not([class*=col]) .radio_item.dot + .radio_item{margin-left:calc((var(--gap_xs) * 2));}
+.radio_group.flex.gap_sm:not([class*=col]) .radio_item.dot + .radio_item{margin-left:calc((var(--gap_sm) * 2));}
+.radio_group.flex.gap_md:not([class*=col]) .radio_item.dot + .radio_item{margin-left:calc((var(--gap_md) * 2));}
+.radio_group.flex.gap_lg:not([class*=col]) .radio_item.dot + .radio_item{margin-left:calc((var(--gap_lg) * 2));}
+.radio_group.flex.gap_xl:not([class*=col]) .radio_item.dot + .radio_item{margin-left:calc((var(--gap_xl) * 2));}
 
 .radio_group.flex.col2.gap_xs .radio_item{flex:0 0 calc(50% -       ((var(--gap_xs) * 1) / 2));}
 .radio_group.flex.col3.gap_xs .radio_item{flex:0 0 calc(33.333% -   ((var(--gap_xs) * 2) / 3));}
@@ -505,8 +513,10 @@ hr.hr_divide{padding:0; margin:6.5rem 0; border:0 none; height:1rem; background:
 .radio_group.col4:not([class*=gap_]) .radio_item.box:nth-child(4n+4) label{margin-right:-3px;}
 
 /* radio etc */
-.radio_group.type_check{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; margin:-4px;}
-.radio_group.type_check .radio_item{flex:1 1 50%; max-width:calc(50% - 8px); margin:4px;}
+.radio_group.type_check{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;}
+.radio_group.type_check .radio_item{flex:0 0 calc(50% - 2px); max-width:calc(50% - 2px); margin-left:4px; margin-top:4px;}
+.radio_group.type_check .radio_item:nth-child(2n + 1){margin-left:0;}
+.radio_group.type_check .radio_item:nth-child(-n + 2){margin-top:0;}
 .radio_group.type_check .radio_item input{position:absolute; clip:rect(0 0 0 0); width:1px; height:1px; margin:-1px; padding:0; border:0; overflow:hidden; white-space:nowrap;}
 .radio_group.type_check .radio_item label{display:block; text-align:center; font-size:1.6rem; border:1px solid #ddd; border-radius:0.8rem; padding:4rem 0 3.6rem;}
 .radio_group.type_check .radio_item label span{display:block;}
@@ -516,3 +526,80 @@ hr.hr_divide{padding:0; margin:6.5rem 0; border:0 none; height:1rem; background:
 .radio_group.type_check .radio_item:nth-child(3) label::before{content:''; display:block; margin:0 auto 1rem; width:4rem; height:4rem; background:#ddd;}
 .radio_group.type_check .radio_item:nth-child(4) label::before{content:''; display:block; margin:0 auto 1rem; width:4rem; height:4rem; background:#ddd;}
 .radio_group.type_check .radio_item input:checked + label{border:2px solid #ffcc00; padding:3.9rem 0 3.5rem; box-shadow:0 2px 8px 0 rgba(0,0,0, 0.1); font-weight:700; color:#222;}
+
+
+
+/* **** checkbox **** */
+.checkbox_group + .checkbox_group{margin-top:3.2rem;}
+.checkbox_group.block{display:block;}
+/* flex */
+.checkbox_group.flex{display:flex; flex-wrap:wrap; align-items:flex-start;}
+.checkbox_group.flex.col2 .checkbox_item{flex:0 0 50%; max-width:50%;}
+.checkbox_group.flex.col3 .checkbox_item{flex:0 0 33.333%; max-width:33.333%;}
+.checkbox_group.flex.col4 .checkbox_item{flex:0 0 25%; max-width:25%;}
+/* gap */
+.checkbox_group.block.gap_xs .checkbox_item + .checkbox_item{margin-top:calc( var(--gap_xs) * 2 );}
+.checkbox_group.block.gap_sm .checkbox_item + .checkbox_item{margin-top:calc( var(--gap_sm) * 2 );}
+.checkbox_group.block.gap_md .checkbox_item + .checkbox_item{margin-top:calc( var(--gap_md) * 2 );}
+.checkbox_group.block.gap_lg .checkbox_item + .checkbox_item{margin-top:calc( var(--gap_lg) * 2 );}
+.checkbox_group.block.gap_xl .checkbox_item + .checkbox_item{margin-top:calc( var(--gap_xl) * 2 );}
+
+.checkbox_group.flex.gap_xs:not([class*=col]) .checkbox_item.check + .checkbox_item{margin-left:calc((var(--gap_xs) * 2));}
+.checkbox_group.flex.gap_sm:not([class*=col]) .checkbox_item.check + .checkbox_item{margin-left:calc((var(--gap_sm) * 2));}
+.checkbox_group.flex.gap_md:not([class*=col]) .checkbox_item.check + .checkbox_item{margin-left:calc((var(--gap_md) * 2));}
+.checkbox_group.flex.gap_lg:not([class*=col]) .checkbox_item.check + .checkbox_item{margin-left:calc((var(--gap_lg) * 2));}
+.checkbox_group.flex.gap_xl:not([class*=col]) .checkbox_item.check + .checkbox_item{margin-left:calc((var(--gap_xl) * 2));}
+
+.checkbox_group.flex.col2.gap_xs .checkbox_item{flex:0 0 calc(50% -       ((var(--gap_xs) * 1) / 2));}
+.checkbox_group.flex.col3.gap_xs .checkbox_item{flex:0 0 calc(33.333% -   ((var(--gap_xs) * 2) / 3));}
+.checkbox_group.flex.col4.gap_xs .checkbox_item{flex:0 0 calc(25% -       ((var(--gap_xs) * 3) / 4));}
+.checkbox_group.flex.col2.gap_sm .checkbox_item{flex:0 0 calc(50% -       ((var(--gap_sm) * 1) / 2));}
+.checkbox_group.flex.col3.gap_sm .checkbox_item{flex:0 0 calc(33.333% -   ((var(--gap_sm) * 2) / 3));}
+.checkbox_group.flex.col4.gap_sm .checkbox_item{flex:0 0 calc(25% -       ((var(--gap_sm) * 3) / 4));}
+.checkbox_group.flex.col2.gap_md .checkbox_item{flex:0 0 calc(50% -       ((var(--gap_md) * 1) / 2));}
+.checkbox_group.flex.col3.gap_md .checkbox_item{flex:0 0 calc(33.333% -   ((var(--gap_md) * 2) / 3));}
+.checkbox_group.flex.col4.gap_md .checkbox_item{flex:0 0 calc(25% -       ((var(--gap_md) * 3) / 4));}
+.checkbox_group.flex.col2.gap_lg .checkbox_item{flex:0 0 calc(50% -       ((var(--gap_lg) * 1) / 2));}
+.checkbox_group.flex.col3.gap_lg .checkbox_item{flex:0 0 calc(33.333% -   ((var(--gap_lg) * 2) / 3));}
+.checkbox_group.flex.col4.gap_lg .checkbox_item{flex:0 0 calc(25% -       ((var(--gap_lg) * 3) / 4));}
+.checkbox_group.flex.col2.gap_xl .checkbox_item{flex:0 0 calc(50% -       ((var(--gap_xl) * 1) / 2));}
+.checkbox_group.flex.col3.gap_xl .checkbox_item{flex:0 0 calc(33.333% -   ((var(--gap_xl) * 2) / 3));}
+.checkbox_group.flex.col4.gap_xl .checkbox_item{flex:0 0 calc(25% -       ((var(--gap_xl) * 3) / 4));}
+
+.checkbox_group.flex.gap_xs[class*=col] .checkbox_item{margin-left:var(--gap_xs); margin-top:var(--gap_xs);}
+.checkbox_group.flex.gap_sm[class*=col] .checkbox_item{margin-left:var(--gap_sm); margin-top:var(--gap_sm);}
+.checkbox_group.flex.gap_md[class*=col] .checkbox_item{margin-left:var(--gap_md); margin-top:var(--gap_md);}
+.checkbox_group.flex.gap_lg[class*=col] .checkbox_item{margin-left:var(--gap_lg); margin-top:var(--gap_lg);}
+.checkbox_group.flex.gap_xl[class*=col] .checkbox_item{margin-left:var(--gap_xl); margin-top:var(--gap_xl);}
+.checkbox_group.flex.col2 .checkbox_item:nth-child(2n + 1),
+.checkbox_group.flex.col3 .checkbox_item:nth-child(3n + 1),
+.checkbox_group.flex.col4 .checkbox_item:nth-child(4n + 1){margin-left:0;}
+.checkbox_group.flex.col2 .checkbox_item:nth-child(-n + 2),
+.checkbox_group.flex.col3 .checkbox_item:nth-child(-n + 3),
+.checkbox_group.flex.col4 .checkbox_item:nth-child(-n + 4){margin-top:0;}
+
+.checkbox_item{position:relative;}
+
+/* checkbox check */
+.checkbox_item.check input{position:absolute; left:0; top:0; width:100%; height:100%; padding:0; border:0;}
+.checkbox_item.check label{position:relative; display:block; font-size:1.6rem; line-height:1.4; padding-left:2.8rem;}
+.checkbox_item.check label::before{content:''; position:absolute; left:0; top:0.1rem; display:block; width:2rem; height:2rem; border-radius:0.4rem; background-color:#efefef;}
+.checkbox_item.check input:disabled + label{color:#999;}
+.checkbox_item.check input:disabled + label::before{opacity:0.5}
+.checkbox_item.check input:checked + label::before{border-color:#ffcc00; background:url(../images/ico/ico_chk.png) 50% 50% / 1.4rem auto no-repeat #ffcc00;}
+.checkbox_item.check label em{font-size:1.3rem;}
+
+/* checkbox etc */
+.checkbox_group.type_check{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;}
+.checkbox_group.type_check .checkbox_item{flex:1 1 calc(33.333% - 4px); max-width:calc(33.333% - 4px); margin-left:4px; margin-top:4px;}
+.checkbox_group.type_check .checkbox_item:nth-child(3n + 1){margin-left:0;}
+.checkbox_group.type_check .checkbox_item:nth-child(-n + 3){margin-top:0;}
+.checkbox_group.type_check .checkbox_item input{position:absolute; clip:rect(0 0 0 0); width:1px; height:1px; margin:-1px; padding:0; border:0; overflow:hidden; white-space:nowrap;}
+.checkbox_group.type_check .checkbox_item label{display:block; text-align:center; font-size:1.6rem; border:1px solid #ddd; border-radius:0.8rem; padding:4rem 0 3.6rem;}
+.checkbox_group.type_check .checkbox_item label span{display:block;}
+.checkbox_group.type_check .checkbox_item label em{font-size:1.4rem; color:#777;}
+.checkbox_group.type_check .checkbox_item:nth-child(1) label::before{content:''; display:block; margin:0 auto 1rem; width:4rem; height:4rem; background:#ddd;}
+.checkbox_group.type_check .checkbox_item:nth-child(2) label::before{content:''; display:block; margin:0 auto 1rem; width:4rem; height:4rem; background:#ddd;}
+.checkbox_group.type_check .checkbox_item:nth-child(3) label::before{content:''; display:block; margin:0 auto 1rem; width:4rem; height:4rem; background:#ddd;}
+.checkbox_group.type_check .checkbox_item:nth-child(4) label::before{content:''; display:block; margin:0 auto 1rem; width:4rem; height:4rem; background:#ddd;}
+.checkbox_group.type_check .checkbox_item input:checked + label{border:2px solid #ffcc00; padding:3.9rem 0 3.5rem; box-shadow:0 2px 8px 0 rgba(0,0,0, 0.1); font-weight:700; color:#222;}

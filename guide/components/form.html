@@ -469,9 +469,11 @@
           </div>
         </div>
 
+
+
+
         
         <hr class="hr_divide">
-
 
         <div class="ttl_page">
           <h2 class="h2">textarea</h2>
@@ -577,9 +579,11 @@
         </div>
 
 
+
+
+
         <hr class="hr_divide">
 
-        
         <div class="ttl_page">
           <h2 class="h2">select</h2>
           <button type="button" class="guide_formbtn btn secondary xs" onclick="toggle(this)">닫기</button>
@@ -612,15 +616,14 @@
               </div>
             </div>
           </div>
-
         </div>
+
+
 
         
 
         <hr class="hr_divide">
         
-
-
         <div class="ttl_page">
           <h2 class="h2">radio</h2>
           <button type="button" class="guide_formbtn btn secondary xs" onclick="toggle(this)">닫기</button>
@@ -918,8 +921,9 @@
 
 
 
-        <hr class="hr_divide">
 
+
+        <hr class="hr_divide">
 
         <div class="ttl_page">
           <h2 class="h2">checkbox</h2>
@@ -928,18 +932,147 @@
 
         <div class="section">
           <div class="ttl_sub">
-            <h3 class="h3">checkbox</h3>
+            <h3 class="h3">checkbox check</h3>
+          </div>
+
+          <div class="ttl_sub">
+            <h4 class="h4">block (gap_xs)</h4>
+          </div>
+
+          <div class="checkbox_group block gap_xs">
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check1_1" name="check_group1">
+              <label for="check1_1">항목1</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check1_2" name="check_group1">
+              <label for="check1_2">
+                <strong>항목2</strong>
+              </label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check1_3" name="check_group1">
+              <label for="check1_3">
+                <strong>항목3</strong><br>
+                <em>항목 3에 대한 설명입니다.</em>
+              </label>
+            </div>
+          </div>
+
+          
+          <div class="ttl_sub">
+            <h4 class="h4">flex (gap_sm)</h4>
+          </div>
+
+          <div class="checkbox_group flex gap_sm">
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check2_1" name="check_group2">
+              <label for="check2_1">항목1</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check2_2" name="check_group2">
+              <label for="check2_2">항목2</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check2_3" name="check_group2" disabled>
+              <label for="check2_3">비활성화</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check2_4" name="check_group2" checked disabled>
+              <label for="check2_4">비활성화(checked)</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check2_5" name="check_group2">
+              <label for="check2_5"><span class="blind">단독사용</label>
+            </div>
+          </div>
+
+          
+          <div class="ttl_sub">
+            <h4 class="h4">flex col2 (gap_md)</h4>
+          </div>
+
+          <div class="checkbox_group flex col2 gap_md">
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check3_1" name="check_group3">
+              <label for="check3_1">항목1</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check3_2" name="check_group3">
+              <label for="check3_2">항목2</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check3_3" name="check_group3">
+              <label for="check3_3">항목3</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check3_4" name="check_group3">
+              <label for="check3_4">항목4</label>
+            </div>
+          </div>
+
+          
+          <div class="ttl_sub">
+            <h4 class="h4">flex col3 (gap_lg)</h4>
+          </div>
+
+          <div class="checkbox_group flex col3 gap_lg">
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check4_1" name="check_group4">
+              <label for="check4_1">항목1</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check4_2" name="check_group4">
+              <label for="check4_2">항목2</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check4_3" name="check_group4">
+              <label for="check4_3">항목3</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check4_4" name="check_group4">
+              <label for="check4_4">항목4</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check4_5" name="check_group4">
+              <label for="check4_5">항목5</label>
+            </div>
+            <div class="checkbox_item check">
+              <input type="checkbox" id="check4_6" name="check_group4">
+              <label for="check4_6">항목6</label>
+            </div>
+          </div>
+
+          
+          <div class="ttl_sub">
+            <h3 class="h3">checkbox etc</h3>
+          </div>
+
+          <div class="ttl_sub">
+            <h4 class="h4">class="checkbox_group {class명}"</h4>
+          </div>
+
+          <div class="checkbox_group type_check">
+            <div class="checkbox_item">
+              <input type="checkbox" id="check5_1" name="check_etc">
+              <label for="check5_1">항목1</label>
+            </div>
+            <div class="checkbox_item">
+              <input type="checkbox" id="check5_2" name="check_etc">
+              <label for="check5_2">항목2</label>
+            </div>
+            <div class="checkbox_item">
+              <input type="checkbox" id="check5_3" name="check_etc">
+              <label for="check5_3">항목3</label>
+            </div>
           </div>
         </div>
 
 
 
-        
-
 
 
         <hr class="hr_divide">
-
 
         <div class="ttl_page">
           <h2 class="h2">switch</h2>
