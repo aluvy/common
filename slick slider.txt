@@ -1,0 +1,804 @@
+<p data-ke-size="size16">&nbsp;</p>
+<h2 data-ke-size="size26"><b>Settings</b></h2>
+<pre id="code_1698901147237" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider-items').slick({
+  rows: 1,                    //이미지를 몇 줄로 표시할지 개수
+  dots: false,                //슬라이더 아래에 도트 네비게이션 버튼 표시 여부(true or false) ▶기본값 false
+  appendDots: $('selector'),  //네비게이션 버튼 변경
+  dotsClass: 'custom-dots',   //네비게이션 버튼 클래스 변경
+  infinite: true,             //무한반복(true or false) 기본값 true
+  slidesToShow: 4,            //한번에 보여줄 슬라이드 아이템 개수
+  slidesToScroll: 4,          //한번에 넘길 슬라이드 아이템 개수
+  slidesPerRow: 1,            //보여질 행의 수 (한 줄, 두 줄 ... )
+  autoplay: true,             //슬라이드 자동 시작(true or false) ▶기본값 false
+  autoplaySpeed: 2000,        //슬라이드 자동 넘기기 시간(1000ms = 1초) 곧, 슬라이드 하나당 머무는 시간
+  variableWidth: true,        //사진마다 width의 크기가 다른가?(true or false) ▶기본값 false
+  draggable: false,           //슬라이드 드래그 가능여부 (true or false) ▶기본값 true
+  arrows: true,               //이전 다음 버튼 표시 여부(true or false) ▶기본값 true
+  pauseOnFocus: true,         //마우스 클릭 시 슬라이드 멈춤 ▶기본값 true
+  pauseOnHover: true,         //마우스 호버 시 슬라이드 멈춤 ▶기본값 true
+  pauseOnDotsHover: true,     //네이게이션버튼 호버 시 슬라이드 멈춤 ▶기본값 false
+  vertical: true,             //세로 방향 여부(true or false) ▶기본값 false
+  verticalSwiping: true,      //세로 방향 스와이프 여부(true or false) ▶기본값 false
+  accessibility: true,        //접근성 여부(true or false) 기본값 false
+  appendArrows: $('#arrows'), //좌우 화살표 변경
+  prevArrow: $('#prevArrow'), //이전 화살표만 변경
+  nextArrow: $('#nextArrow'), //다음 화살표만 변경
+  initialSlide: 1,            //처음 보여질 슬라이드 번호 ▶기본값 0
+  centerMode: true,           //중앙에 슬라이드가 보여지는 모드 ▶기본값 false
+  centerPadding: '70px',      //중앙에 슬라이드가 보여지는 모드에서 패딩 값
+  fade: true,                 //크로스페이드 모션 사용 여부 ▶기본값 false
+  speed: 2000,                //모션 시간 (얼마나 빠른속도로 넘어가는지)(1000ms = 1초) 곧, 슬라이드 사이에 넘어가는 속도
+  waitForAnimate: true,       //애니메이션 중에는 동작을 제한함 ▶기본값 true 
+  // ▼ 반응형 브레이크포인트 옵션
+  // breakpoint: 숫자를 제작자의 환경에 맞게 조정함 ex) breakpoint: 1280
+  // 각 브레이크포인트 내에 settings 안에 위의 모든 옵션을 다르게 적용할 수 있음
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%; height: 1706px;" border="1" data-ke-align="alignLeft" data-ke-style="style8">
+<tbody>
+<tr style="height: 17px;">
+<td style="width: 20%; height: 17px;"><b>Settings</b></td>
+<td style="width: 10%; height: 17px;"><b>Type</b></td>
+<td style="width: 15%; height: 17px;"><b>Default</b></td>
+<td style="width: 65%; height: 17px;"><b>Description</b></td>
+</tr>
+<tr style="height: 100px;">
+<td style="height: 100px;">accessibility</td>
+<td style="height: 100px;">boolean</td>
+<td style="height: 100px;">true</td>
+<td style="height: 100px;"><b>탭 및 화살표 키의 탐색을 활성화 한다.</b><br />autoplay: false일 경우, 슬라이드가 변경된 후에는 현재 슬라이드에 초정믈 맞춥니다.(여러개의 slideToShow 인 경우, 첫번째 슬라이드)<br />완벽한 접근성 준수를 위해 focusOnChange를 활성화한다.</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">adaptiveHeigh</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">false</td>
+<td style="height: 20px;">슬라이드마다 슬라이더의 높이가 바뀐다.</td>
+</tr>
+<tr style="height: 37px;">
+<td style="height: 37px;">appendArrows</td>
+<td style="height: 37px;">string</td>
+<td style="height: 37px;">$(element)</td>
+<td style="height: 37px;">화살표 element 변경<br />(Selector, htmlString, Array, Element, jQuery object)</td>
+</tr>
+<tr style="height: 37px;">
+<td style="height: 37px;">appendDots</td>
+<td style="height: 37px;">string</td>
+<td style="height: 37px;">$(element)</td>
+<td style="height: 37px;">페이징(dot) element 변경<br />(Selector, htmlString, Array, Element, jQuery object)</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">arrows</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">true</td>
+<td style="height: 20px;">Next / Prev 버튼 활성화</td>
+</tr>
+<tr style="height: 40px;">
+<td style="height: 40px;">asNavFor</td>
+<td style="height: 40px;">string</td>
+<td style="height: 40px;">$(element)</td>
+<td style="height: 40px;"><b>여러 슬라이드 동기화 가능.</b><br />슬라이드 2개이상 쓸 때 사용.</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">autoplay</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">false</td>
+<td style="height: 20px;">autoplay 활성화</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">autoplaySpeed</td>
+<td style="height: 20px;">int</td>
+<td style="height: 20px;">3000</td>
+<td style="height: 20px;">autoplay 속도 변경</td>
+</tr>
+<tr style="height: 40px;">
+<td style="height: 40px;">centerMode</td>
+<td style="height: 40px;">boolean</td>
+<td style="height: 40px;">false</td>
+<td style="height: 40px;"><b>앞 뒤 슬라이드를 부분적으로 포함하여 슬라이드를 가운데 표시한다.</b><br />slidesToShow를 함께 지정하고 값은 홀수로 지정한다.</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">centerpadding</td>
+<td style="height: 20px;">string</td>
+<td style="height: 20px;">'50px'</td>
+<td style="height: 20px;">centerMode일 때 양옆의 padding 지정 (px, %)</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px;">cssEase</td>
+<td style="height: 17px;">string</td>
+<td style="height: 17px;">'ease'</td>
+<td style="height: 17px;"><b>CSS3 easing </b>(ease, ease-in, linear)</td>
+</tr>
+<tr style="height: 60px;">
+<td style="height: 60px;">customPaging</td>
+<td style="height: 60px;">function</td>
+<td style="height: 60px;">n/a</td>
+<td style="height: 60px;">페이징(dot) 을 커스텀 한다 (dots: true 필요)</td>
+</tr>
+<tr style="height: 40px;">
+<td style="height: 40px;">dots</td>
+<td style="height: 40px;">boolean</td>
+<td style="height: 40px;">false</td>
+<td style="height: 40px;">페이징(dot) 활성화</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">dotsClass</td>
+<td style="height: 20px;">string</td>
+<td style="height: 20px;">'slick-dots'</td>
+<td style="height: 20px;">페이징(dot) 클래스 지정</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">draggable</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">true</td>
+<td style="height: 20px;">PC에서 드래그 활성화</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">easing</td>
+<td style="height: 20px;">string</td>
+<td style="height: 20px;">'linear'</td>
+<td style="height: 20px;">jQuery animate() easing 사용</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">edgeFriction</td>
+<td style="height: 20px;">integer</td>
+<td style="height: 20px;">0.15</td>
+<td style="height: 20px;">넘겨질 슬라이드가 없을 때 저항값 지정 (overscroll 값 지정)</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">fade</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">false</td>
+<td style="height: 20px;">fade 활성화</td>
+</tr>
+<tr style="height: 40px;">
+<td style="height: 40px;">focusOnSelect</td>
+<td style="height: 40px;">boolean</td>
+<td style="height: 40px;">false</td>
+<td style="height: 40px;">클릭하여 선택한 슬라이드에 focus를 맞춥니다.<br />(focus 되면 왼쪽 가장자리로 슬라이드 이동)</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">focusOnChange</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">false</td>
+<td style="height: 20px;">화살표 등으로 슬라이드가 이동할 때 슬라이드를 focus 한다.<br />(왼쪽 가장자리의 슬라이드가 focus 됨)</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">infinite</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">false</td>
+<td style="height: 20px;">무한 루프 활성화</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">initialSlide</td>
+<td style="height: 20px;">integer</td>
+<td style="height: 20px;">0</td>
+<td style="height: 20px;">처음 보여질 슬라이드 지정</td>
+</tr>
+<tr style="height: 100px;">
+<td style="height: 100px;">lazyLoad</td>
+<td style="height: 100px;">string</td>
+<td style="height: 100px;">'ondemand'</td>
+<td style="height: 100px;"><b>'ondemand'&nbsp; or 'progressive'<br /></b>ondemand : 슬라이드를 넘긴 후에 이미지 로드<br />progressive : 페이지가 로드된 후 이미지 로드</td>
+</tr>
+<tr style="height: 100px;">
+<td style="height: 100px;">mobileFirst</td>
+<td style="height: 100px;">boolean</td>
+<td style="height: 100px;">false</td>
+<td style="height: 100px;">responsive settings에서 모바일 사이즈를 설정하여 mobile일 때 사용가능하게 한다.<br />breakpoint를 기준으로 mobileFirst: false은 창 너비(설정에 따라 슬라이드 너비)가 breakpoint보다 작은지 여부를 결정, mobileFirst: true는 창 너비가 breakpoint보다 큰지 여부를 결정.</td>
+</tr>
+<tr style="height: 119px;">
+<td style="height: 119px;">nextArrow</td>
+<td style="height: 119px;">string<br />(html | jQuery selector) | object (DOM node | jQuery object)</td>
+<td style="height: 119px;"><code>html</code></td>
+<td style="height: 119px;"><b>Next 화살표를 node나 HTML로 변경<br /></b> <span style="background-color: #ffffff; color: #333333; text-align: start;">nextArrow</span><span style="background-color: #ffffff; color: #333333; text-align: start;">: </span><span style="background-color: #ffffff; color: #f50057; text-align: start;">'&lt;button type="button" class="slick-next"&gt;Next&lt;/button&gt;'</span></td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">pauseOnDotsHover</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">false</td>
+<td style="height: 20px;">페이징(dot) hover 시 autoplay 정지</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">pauseOnFocus</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">true</td>
+<td style="height: 20px;">슬라이드 포커스 시 autoplay 정지</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">pauseOnHover</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">true</td>
+<td style="height: 20px;">슬라이더 hover 시 autoplay 정지</td>
+</tr>
+<tr style="height: 119px;">
+<td style="height: 119px;">prevArrow</td>
+<td style="height: 119px;">string (html | jQuery selector) | object (DOM node | jQuery object)</td>
+<td style="height: 119px;"><span style="background-color: #e6f5ff; color: #333333; text-align: start;">html</span></td>
+<td style="height: 119px;"><b>Prev 화살표를 node나 HTML로 변경.<br /></b><span style="background-color: #ffffff; color: #333333; text-align: start;">prevArrow</span><span style="background-color: #ffffff; color: #333333; text-align: start;">: </span><span style="background-color: #ffffff; color: #f50057; text-align: start;">'&lt;button type="button" class="slick-prev"&gt;Previous&lt;/button&gt;'</span><b><br /></b></td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">respondTo</td>
+<td style="height: 20px;">string</td>
+<td style="height: 20px;">'window'</td>
+<td style="height: 20px;"><b>breakpoint의 기준으로 객체를 지정.</b></td>
+</tr>
+<tr style="height: 40px;">
+<td style="height: 40px;">responsive</td>
+<td style="height: 40px;">object</td>
+<td style="height: 40px;">none</td>
+<td style="height: 40px;">반응형 크기에 따른 재설정이 가능. <br /><code>breakpoint</code>로 화면 크기를 설정해주며, slick을 사용하지 않으면 마지막에 <code>unslick</code> 해준다.</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">rows</td>
+<td style="height: 20px;">int</td>
+<td style="height: 20px;">1</td>
+<td style="height: 20px;">slidePerRow를 넣어, 행에 슬라이드 수를 정한다.</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">rtl</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">false</td>
+<td style="height: 20px;">슬라이더의 방향을 오른쪽에서 왼쪽으로 변경.</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">slide</td>
+<td style="height: 20px;">string</td>
+<td style="height: 20px;">''</td>
+<td style="height: 20px;">슬라이드로 사용할 요소에 대한 쿼리를 지정</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">slidesPerRow</td>
+<td style="height: 20px;">int</td>
+<td style="height: 20px;">1</td>
+<td style="height: 20px;">각 행에 슬라이드가 추가 여부.</td>
+</tr>
+<tr style="height: 40px;">
+<td style="height: 40px;">slidesToScroll</td>
+<td style="height: 40px;">int</td>
+<td style="height: 40px;">1</td>
+<td style="height: 40px;">슬라이드 될 때 스크롤되는 슬라이드 수 지정</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">slidesToShow</td>
+<td style="height: 20px;">int</td>
+<td style="height: 20px;">1</td>
+<td style="height: 20px;">한번에 표시할 슬라이드 수 지정</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">speed</td>
+<td style="height: 20px;">int</td>
+<td style="height: 20px;">300</td>
+<td style="height: 20px;">슬라이드 움직이는 속도</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">swipe</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">true</td>
+<td style="height: 20px;">스와이프 사용여부</td>
+</tr>
+<tr style="height: 40px;">
+<td style="height: 40px;">swipeToSlide</td>
+<td style="height: 40px;">boolean</td>
+<td style="height: 40px;">false</td>
+<td style="height: 40px;">slidesToScroll에 관계없이 스와이프로 슬라이드</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">touchMove</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">true</td>
+<td style="height: 20px;">터치 조작으로 슬라이드 활성화</td>
+</tr>
+<tr style="height: 40px;">
+<td style="height: 40px;">touchThreshold</td>
+<td style="height: 40px;">int</td>
+<td style="height: 40px;">5</td>
+<td style="height: 40px;">스와이프로 슬라이드를 이동하는데 필요한 거리를 지정</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">useCSS</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">true</td>
+<td style="height: 20px;">CSS transition 활성화</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">useTransform</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">true</td>
+<td style="height: 20px;">CSS Transforms 활성화</td>
+</tr>
+<tr style="height: 40px;">
+<td style="height: 40px;">variableWidth</td>
+<td style="height: 40px;">boolean</td>
+<td style="height: 40px;">false</td>
+<td style="height: 40px;">슬라이드 너비 자동계산을 비활성화.<br />true일 경우, 활성화되어 자동으로 맞춘 슬라이드 너비가 해제된다.</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">vertical</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">false</td>
+<td style="height: 20px;">슬라이드를 수직 방향으로 넘긴다.</td>
+</tr>
+<tr style="height: 40px;">
+<td style="height: 40px;">verticalWidth</td>
+<td style="height: 40px;">boolean</td>
+<td style="height: 40px;">false</td>
+<td style="height: 40px;">수평인 스와이프 방향을 변경.<br />true면 세로로 변경.</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">waitForAnimate</td>
+<td style="height: 20px;">boolean</td>
+<td style="height: 20px;">true</td>
+<td style="height: 20px;">애니메이션 중 슬라이드 이동 요청 무시.</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px;">zIndex</td>
+<td style="height: 20px;">number</td>
+<td style="height: 20px;">1000</td>
+<td style="height: 20px;">슬라이드의 z-index를 설정할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">asNavFor</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">슬라이더를 다른 슬라이더의 네비게이션으로 설정합니다. <span style="background-color: #ffffff; color: #202124; text-align: left;">(클래스 또는 ID를 지정할 수 있습니다.)</span> </span></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">demo : <a href="https://tr.you84815.space/slick/settings/asNavFor.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/settings/asNavFor.html</a></span></p>
+<pre id="code_1698906717876" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$(document).ready(function(){
+  $('.slider').slick({
+    asNavFor: '.slider-nav'
+    arrows: false,
+  });
+  $('.slider-nav').slick({
+    asNavFor: '.slider',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    focusOnSelect: true,
+    slide: 'p'
+  });
+});</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">customPaging</span> </b></p>
+<p data-ke-size="size16">페이징을 커스텀한다.</p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/settings/customPaging.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/settings/customPaging.html</a></p>
+<pre id="code_1698907052808" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick({
+    customPaging: function(slider, i) {
+    	return $('&lt;span&gt;').text(i + 1);
+    },
+    dots: true,
+});</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style5" />
+<p data-ke-size="size16">&nbsp;</p>
+<h2 data-ke-size="size26"><b>Events</b></h2>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">slick 1.4에서는 콜백 메소드가 더 이상 사용되지 않으며 이벤트로 대체되었다. 아래와 같이 초기화전에 사용한다.</span></p>
+<pre id="code_1698902505684" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>// On swipe event
+$('.your-element').on('swipe', function(event, slick, direction){
+  console.log(direction);
+  // left
+});
+
+// On edge hit
+$('.your-element').on('edge', function(event, slick, direction){
+  console.log('edge was hit')
+});
+
+// On before slide change
+$('.your-element').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  console.log(nextSlide);
+});</code></pre>
+<table style="border-collapse: collapse; width: 100%;" border="1" data-ke-align="alignLeft" data-ke-style="style8">
+<tbody>
+<tr>
+<td style="width: 15%;"><b>Event</b></td>
+<td style="width: 50%;"><b>Description</b></td>
+</tr>
+<tr>
+<td style="width: 15%;">afterChange</td>
+<td style="width: 50%;">슬라이드 이동 후 이벤트 시작</td>
+</tr>
+<tr>
+<td style="width: 15%;">beforeChange</td>
+<td style="width: 50%;">슬라이드 이동 전 이벤트 시작</td>
+</tr>
+<tr>
+<td style="width: 15%;">breakpoint</td>
+<td style="width: 50%;"><b>반응형 설정 중에 breakpoint에 도달하면 발생하는 이벤트</b><br />breakpoint에서 지정한 너비에 해당 이벤트가 발생한다.</td>
+</tr>
+<tr>
+<td style="width: 15%;">destroy</td>
+<td style="width: 50%;">슬라이드가 삭제(destoryed)되거나 풀릴 때(unslicked) 발생하는 이벤트</td>
+</tr>
+<tr>
+<td style="width: 15%;">edge</td>
+<td style="width: 50%;"><b>non-infinite(무한대) 일 때, 가장자리가 오버 스크롤 될 때 발생</b><br />마지막 슬라이드에서 우너하는 이벤트를 발생시킨다.</td>
+</tr>
+<tr>
+<td style="width: 15%;">init</td>
+<td style="width: 50%;"><b>slick이 초기화 될 때 발생.</b><br />슬라이더가 초기화되기 전에 이벤트를 정의해야 한다.</td>
+</tr>
+<tr>
+<td style="width: 15%;">reInit</td>
+<td style="width: 50%;">초기화될 때마다 slick이 발생</td>
+</tr>
+<tr>
+<td style="width: 15%;">setPosition</td>
+<td style="width: 50%;"><b>위치가 다시 계산 될때마다 발생</b><br />슬라이드가 초기화될 때마다 슬라이드 재 초기화 이벤트 발생</td>
+</tr>
+<tr>
+<td style="width: 15%;">swipe</td>
+<td style="width: 50%;"><b>swipe 하거나 드래그 한 후 이벤트 발생</b><br />슬라이드를 swipe하면 어느방향으로 이동했는지 알 수 있다.</td>
+</tr>
+<tr>
+<td style="width: 15%;">lazyLoaded</td>
+<td style="width: 50%;"><b>이미지가 느리게 로드된 후 발생</b><br />lazyLoad 세팅을 발생시킬 때 사용 가능. 현재 슬라이드의 이미지 소스를 알 수 있다.</td>
+</tr>
+<tr>
+<td style="width: 15%;">lazyLoadError</td>
+<td style="width: 50%;"><b>이미지 로드에 실패한 후 이벤트가 발생</b></td>
+</tr>
+</tbody>
+</table>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b>afterChange</b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">슬라이드가 이동한 후 발생하는 이벤트</span><span style="background-color: #ffffff; color: #202124; text-align: left;"></span></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">demo :&nbsp;</span><span style="background-color: #ffffff; color: #202124; text-align: left;"><a href="https://tr.you84815.space/slick/events/afterChange.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/afterChange.html</a></span></p>
+<pre id="code_1698903571610" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('afterChange', function(event, slick, currentSlide){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b><span style="background-color: #ffffff; color: #202124; text-align: left;">beforeChange</span></b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">슬라이드가 이동하기 전에 발생하는 이벤트</span></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">demo :&nbsp;</span><a href="https://tr.you84815.space/slick/events/beforeChange.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/beforeChange.html</a></p>
+<pre id="code_1698903685902" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b><span style="background-color: #ffffff; color: #202124; text-align: left;">breakpoint</span></b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">반응형 설정시의 브레이크 포인트에 도달했을 때 발생하는 이벤트</span></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">demo : <a href="https://tr.you84815.space/slick/events/breakpoint.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/breakpoint.html</a></span></p>
+<pre id="code_1698903760222" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('breakpoint', function(event, slick, breakpoint){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">destroy</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">슬라이드가 파기되거나 <span style="background-color: #ffffff; color: #202124; text-align: left;"><span style="background-color: #dddddd;">unslicked</span> <span style="background-color: #ffffff; color: #202124; text-align: left;">발생했을 때 발생하는 이벤트</span></span></span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/events/destroy.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/destroy.html</a></p>
+<pre id="code_1698903835133" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('destroy', function(event, slick){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">edge</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">맨 끝 슬라이드에서 이동하려고 한 후에 발생하는 이벤트</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/events/edge.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/edge.html</a></p>
+<pre id="code_1698903957727" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('edge', function(event, slick, direction){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">init</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">slick을 초기화할 때 발생. <span style="background-color: #ffffff; color: #202124; text-align: left;">이 이벤트는 슬라이더를 초기화하기 전에 정의해야 함</span></span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/events/init.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/init.html</a></p>
+<pre id="code_1698904027246" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('init', function(event, slick){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">lazyLoaded</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">이미지를 지연 로드한 후 발생하는 이벤트</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/events/lazyLoaded.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/lazyLoaded.html</a></p>
+<pre id="code_1698904103663" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('lazyLoaded', function(event, slick, image, imageSource){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">lazyLoadError</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">이미지를 로드하지 못한 후에 발생하는 이벤트</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/events/lazyLoadError.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/lazyLoadError.html</a></p>
+<pre id="code_1698904172640" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('lazyLoadError', function(event, slick, image, imageSource){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">reInit</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">slick을 (재) 초기화 할 때마다 발생하는 이벤트</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/events/reInit.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/reInit.html</a></p>
+<pre id="code_1698904220830" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('reInit', function(event, slick){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">setPosition</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">slick의 위치를 ​​다시 계산할 때마다 발생하는 이벤트</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/events/setPosition.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/setPosition.html</a></p>
+<pre id="code_1698904268299" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('setPosition', function(event, slick){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">swipe</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">스와이프하거나 드래그한 후 발생하는 이벤트</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/events/swipe.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/events/swipe.html</a></p>
+<pre id="code_1698904317747" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').on('swipe', function(event, slick, direction){ ... });</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style5" />
+<p data-ke-size="size16">&nbsp;</p>
+<h2 data-ke-size="size26"><b>methods</b></h2>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">slick 1.4에서는 slick instance 자체에서 메서드가 호출된다.</span></p>
+<pre id="code_1698902876137" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>// Add a slide
+$('.your-element').slick('slickAdd',"&lt;div&gt;&lt;/div&gt;");
+
+// Get the current slide
+var currentSlide = $('.your-element').slick('slickCurrentSlide');</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">새로운 구문(syntax)를 통해 slick 내부의 메소드를 호출 할 수 있다.</span></p>
+<pre id="code_1698902898136" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>// Manually refresh positioning of slick
+$('.your-element').slick('setPosition');</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<pre id="code_1698901289383" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>// slider 제거하기
+$('#slider-div').slick("unslick")
+
+
+// slider에 새로운 아이템 추가하기
+$('#slider-div').slick('slickAdd',"&lt;div&gt;새로운 아이템&lt;/div&gt;");
+
+
+// slider에 있는 아이템 삭제하기
+$('#slider-div').slick('slickRemove',0);	//특정 인덱스 번호에 있는 slider 삭제
+$('#slider-div').slick('slickRemove',false);	//false이면 맨 마지막 슬라이더 삭제
+$('#slider-div').slick('slickRemove',true);	// true이면 맨 앞 슬라이더 삭제
+
+
+// 현재 보여지는 슬라이더가 몇번째 슬라이더인지 확인하기
+$('#slider-div').slick('slickCurrentSlide');   // 가장 첫번째에 있는 슬라이드는 0번이다.
+
+
+// 자동 슬라이드 넘기기 정지 / 시작
+$('#slider-div').slick('slickPause');   // 정지
+$('#slider-div').slick('slickPlay');    // 시작
+
+
+// 원하는 슬라이드로 이동
+$('#slider-div').slick('goTo', 1);    // slick('goTo', index ) index는 0부터 시작이다.</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%;" border="1" data-ke-align="alignLeft" data-ke-style="style8">
+<tbody>
+<tr>
+<td style="width: 20%;"><b>Method</b></td>
+<td style="width: 30%;"><b>Argument</b></td>
+<td style="width: 50%;"><b>Description</b></td>
+</tr>
+<tr>
+<td><code>slick</code></td>
+<td>options: object</td>
+<td>slick 초기화</td>
+</tr>
+<tr>
+<td><code>unslick</code></td>
+<td>&nbsp;</td>
+<td>slick 삭제</td>
+</tr>
+<tr>
+<td><code>slickNext</code></td>
+<td>&nbsp;</td>
+<td>다음 슬라이드로 이동</td>
+</tr>
+<tr>
+<td><code>slickPrev</code></td>
+<td>&nbsp;</td>
+<td>이전 슬라이드로 이동</td>
+</tr>
+<tr>
+<td><code>slickPause</code></td>
+<td>&nbsp;</td>
+<td>autoplay 정지</td>
+</tr>
+<tr>
+<td><code>slickPlay</code></td>
+<td>&nbsp;</td>
+<td>autoplay 시작 (<code>autoplay</code> option이 <code>true</code>로 설정됨)</td>
+</tr>
+<tr>
+<td><code>slickGoTo</code></td>
+<td>index: int, dotAnimation: bool</td>
+<td><code>index</code>로 지정된 슬라이드로 이동</td>
+</tr>
+<tr>
+<td><code>slickCurrentSlide</code></td>
+<td>&nbsp;</td>
+<td>현재 슬라이드 index의 값을 알려준다.</td>
+</tr>
+<tr>
+<td><code>slickAdd</code></td>
+<td>element: html or DOM object, index: int, addBefore: bool</td>
+<td>슬라이드 추가</td>
+</tr>
+<tr>
+<td><code>slickRemove</code></td>
+<td>index: int, removeBefore: bool</td>
+<td>index로 지정된 슬라이드를 제거</td>
+</tr>
+<tr>
+<td><code>slickFilter</code></td>
+<td>filter: selector or function</td>
+<td>jQuery의 .filter구문을 사용하여 필터링한다.</td>
+</tr>
+<tr>
+<td><code>slickUnfilter</code></td>
+<td>&nbsp;</td>
+<td>적용된 .filter를 해체</td>
+</tr>
+<tr>
+<td><code>slickGetOption</code></td>
+<td>option: string(option name)</td>
+<td>지정된 option값을 가져온다</td>
+</tr>
+<tr>
+<td><code>slickSetOption</code></td>
+<td><span style="color: #333333; text-align: start;">option, value, refresh</span></td>
+<td><span style="color: #333333; text-align: start;">option을 변경하고<span>&nbsp;</span></span>refresh<span style="color: #333333; text-align: start;">는 항상<span>&nbsp;</span></span>boolean을 받고 UI를 업데이트한다.<br /><br />지정된 settingOption의 값(value<span style="color: #333333; text-align: start;">)을 변경.<span>&nbsp;</span></span>refresh는 선택적이다.</td>
+</tr>
+<tr>
+<td><code></code></td>
+<td><span style="color: #333333; text-align: start;">'responsive', [{ breakpoint: n, settings: {}, ... }], refresh</span></td>
+<td>설정해놓은 responsive options을 변화시키거나 추가</td>
+</tr>
+<tr>
+<td><code></code></td>
+<td><span style="color: #333333; text-align: start;">{option: value, option: value, ...}, refresh</span></td>
+<td>여러 옵션을 해당 값으로 변경</td>
+</tr>
+</tbody>
+</table>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slick</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">slick 초기화</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slick.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slick.html</a></p>
+<pre id="code_1698904822772" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick({
+    dots: true,
+    speed: 500
+});</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">unslick</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">slick 삭제</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/unslick.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/unslick.html</a></p>
+<pre id="code_1698904929622" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick('unslick');</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickNext</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">다음 슬라이드로 이동</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickNext.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickNext.html</a></p>
+<pre id="code_1698904956518" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick('slickNext');</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickPrev</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">이전 슬라이드로 이동</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickPrev.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickPrev.html</a></p>
+<pre id="code_1698904990351" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick('slickPrev');</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickPause</span> </b></p>
+<p data-ke-size="size16">슬라이드를 멈춥니다.</p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickPause.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickPause.html</a></p>
+<pre id="code_1698905020640" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick('slickPause');</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickPlay</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">슬라이드 자동 재생을 시작합니다. (autoplay 옵션도 true 됩니다.)</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickPlay.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickPlay.html</a></p>
+<pre id="code_1698905071657" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick('slickPlay');</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickGoTo</span> </b></p>
+<p data-ke-size="size16">index에서 지정한 슬라이드로 이동합니다.</p>
+<p data-ke-size="size16">두 번째 매개변수로 true를 지정하면 이동 애니메이션을 스킵합니다.</p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickGoTo.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickGoTo.html</a></p>
+<pre id="code_1698905112775" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>// index : int
+// dontAnimate : Boolean
+$('.slider').slick('slickGoTo', index, dontAnimate);
+$('.slider').slick('slickGoTo', 2, true);</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickCurrentSlide</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">현재 슬라이드 번호가 표시됩니다</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickCurrentSlide.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickCurrentSlide.html</a></p>
+<pre id="code_1698905246634" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick('slickCurrentSlide');</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickAdd</span> </b></p>
+<p data-ke-size="size16">슬라이드를 추가합니다.</p>
+<p data-ke-size="size16">index가 지정되어 있는 경우, 그 인덱스에 추가합니다.</p>
+<p data-ke-size="size16">addBefore가 true면 지정한 index 슬라이드 앞에 추가합니다.</p>
+<p data-ke-size="size16">HTML 문자열을 받습니다.</p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickAdd.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickAdd.html</a></p>
+<pre id="code_1698905302224" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick('slickAdd', element, index, addBefore);
+$('.slider').slick('slickAdd', '&lt;p&gt;4&lt;/p&gt;', 1, true);</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickRemove</span> </b></p>
+<p data-ke-size="size16">index에서 지정한 슬라이드를 삭제합니다.</p>
+<p data-ke-size="size16">index를 지정하지 않으면 첫 번째 슬라이드를 제거합니다.</p>
+<p data-ke-size="size16">removeBefore가 true면 index에서 지정한 슬라이드 앞의 슬라이드를 삭제합니다.</p>
+<p data-ke-size="size16">removeBefore가 false면 index에서 지정한 슬라이드 후행 슬라이드를 삭제합니다.</p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickRemove.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickRemove.html</a></p>
+<pre id="code_1698905376770" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>// index : int
+// removeBefore : boolean
+$('.slider').slick('slickRemove', index, removeBefore);
+$('.slider').slick('slickRemove', 1, true);</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickFilter</span> </b></p>
+<p data-ke-size="size16">jQuery filter 구문을 사용하여 필터링 합니다.</p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickFilter.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickFilter.html</a></p>
+<pre id="code_1698905592893" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick('slickFilter', filter);
+$('.slider').slick('slickFilter', ':even');	// 짝수 슬라이드만 표시</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickUnfilter</span> </b></p>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">적용된 필터를 해제합니다.</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickUnfilter.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickUnfilter.html</a></p>
+<pre id="code_1698905664009" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick('slickUnfilter');</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<h4 data-ke-size="size20"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickGetOption</span> </b></h4>
+<p data-ke-size="size16"><span style="background-color: #ffffff; color: #202124; text-align: left;">지정된 옵션의 값을 가져옵니다.</span></p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickGetOption.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickGetOption.html</a></p>
+<pre id="code_1698905736737" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>$('.slider').slick('slickGetOption', option);
+var autoplay = $('.slider').slick('slickGetOption', 'autoplay'); // autoplay : true</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b> <span style="background-color: #ffffff; color: #202124; text-align: left;">slickSetOption</span> </b></p>
+<p data-ke-size="size16">지정된&nbsp;옵션의&nbsp;값을&nbsp;변경합니다.&nbsp;refresh항상&nbsp;boolean받고&nbsp;UI를&nbsp;업데이트합니다.</p>
+<p data-ke-size="size16">demo : <a href="https://tr.you84815.space/slick/methods/slickSetOption.html" target="_blank" rel="noopener&nbsp;noreferrer">https://tr.you84815.space/slick/methods/slickSetOption.html</a></p>
+<pre id="code_1698905854397" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>// option : string
+// value : 
+// refresh : boolean
+$('.slider').slick('slickSetOption', option, value, refresh);
+$(element).slick('slickSetOption', 'speed', 5000, true);	// speed를 변화시킨다</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style5" />
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16"><b>참고:)</b></p>
+<p data-ke-size="size16"><a href="https://kenwheeler.github.io/slick/" target="_blank" rel="noopener&nbsp;noreferrer">https://kenwheeler.github.io/slick/</a></p>
+<figure id="og_1698901011915" contenteditable="false" data-ke-type="opengraph" data-ke-align="alignCenter" data-og-type="article" data-og-title="slick - the last carousel you'll ever need" data-og-description="slick is a responsive carousel jQuery plugin that supports multiple breakpoints, CSS3 transitions, touch events/swiping &amp; much more!" data-og-host="kenwheeler.github.io" data-og-source-url="https://kenwheeler.github.io/slick/" data-og-url="http://kenwheeler.github.io/slick/" data-og-image="https://scrap.kakaocdn.net/dn/vhLmc/hyUnLtC8Gm/k60YYw0EpxsR85HYj1kerK/img.gif?width=300&amp;height=300&amp;face=0_0_300_300,https://scrap.kakaocdn.net/dn/cYhtD0/hyUnM0nqpw/Vmf5oC2KY4XsHKWPTT7FC0/img.png?width=560&amp;height=400&amp;face=249_81_276_110,https://scrap.kakaocdn.net/dn/bUfnK3/hyUnXAPmhN/RFcLBO10MpTUH64nv5rnmK/img.png?width=560&amp;height=400&amp;face=149_81_386_140"><a href="https://kenwheeler.github.io/slick/" target="_blank" rel="noopener" data-source-url="https://kenwheeler.github.io/slick/">
+<div class="og-image" style="background-image: url('https://scrap.kakaocdn.net/dn/vhLmc/hyUnLtC8Gm/k60YYw0EpxsR85HYj1kerK/img.gif?width=300&amp;height=300&amp;face=0_0_300_300,https://scrap.kakaocdn.net/dn/cYhtD0/hyUnM0nqpw/Vmf5oC2KY4XsHKWPTT7FC0/img.png?width=560&amp;height=400&amp;face=249_81_276_110,https://scrap.kakaocdn.net/dn/bUfnK3/hyUnXAPmhN/RFcLBO10MpTUH64nv5rnmK/img.png?width=560&amp;height=400&amp;face=149_81_386_140');">&nbsp;</div>
+<div class="og-text">
+<p class="og-title" data-ke-size="size16">slick - the last carousel you'll ever need</p>
+<p class="og-desc" data-ke-size="size16">slick is a responsive carousel jQuery plugin that supports multiple breakpoints, CSS3 transitions, touch events/swiping &amp; much more!</p>
+<p class="og-host" data-ke-size="size16">kenwheeler.github.io</p>
+</div>
+</a></figure>
+<p data-ke-size="size16"><a href="https://github.com/kenwheeler/slick" target="_blank" rel="noopener&nbsp;noreferrer">https://github.com/kenwheeler/slick</a></p>
+<figure id="og_1698902466942" contenteditable="false" data-ke-type="opengraph" data-ke-align="alignCenter" data-og-type="object" data-og-title="GitHub - kenwheeler/slick: the last carousel you'll ever need" data-og-description="the last carousel you'll ever need. Contribute to kenwheeler/slick development by creating an account on GitHub." data-og-host="github.com" data-og-source-url="https://github.com/kenwheeler/slick" data-og-url="https://github.com/kenwheeler/slick" data-og-image="https://scrap.kakaocdn.net/dn/czXGcA/hyUnPpqlM5/PZTtOXbKv3s21OGbVzdK41/img.png?width=1200&amp;height=600&amp;face=963_153_1030_226"><a href="https://github.com/kenwheeler/slick" target="_blank" rel="noopener" data-source-url="https://github.com/kenwheeler/slick">
+<div class="og-image" style="background-image: url('https://scrap.kakaocdn.net/dn/czXGcA/hyUnPpqlM5/PZTtOXbKv3s21OGbVzdK41/img.png?width=1200&amp;height=600&amp;face=963_153_1030_226');">&nbsp;</div>
+<div class="og-text">
+<p class="og-title" data-ke-size="size16">GitHub - kenwheeler/slick: the last carousel you'll ever need</p>
+<p class="og-desc" data-ke-size="size16">the last carousel you'll ever need. Contribute to kenwheeler/slick development by creating an account on GitHub.</p>
+<p class="og-host" data-ke-size="size16">github.com</p>
+</div>
+</a></figure>
+<p data-ke-size="size16"><a href="https://www.inflearn.com/blogs/3749" target="_blank" rel="noopener&nbsp;noreferrer">https://www.inflearn.com/blogs/3749</a></p>
+<figure id="og_1698901157346" contenteditable="false" data-ke-type="opengraph" data-ke-align="alignCenter" data-og-type="website" data-og-title="슬릭 슬라이더(Slick Slider) 옵션 한글 정리 - 코딩웍스(Coding Works)님의 블로그 - 인프런 | 커뮤니티" data-og-description="슬릭 슬라이더(Slick Slider) 옵션 한글 정리 - 안녕하세요. 코딩웍스입니다.Swiper Slider, Slick Slider 등 슬라이더를 만드는 제이쿼리 플러그인이 여러개 있습니다. 그 중에 슬릭 슬라이더 옵션을 한글" data-og-host="www.inflearn.com" data-og-source-url="https://www.inflearn.com/blogs/3749" data-og-url="https://www.inflearn.com/blogs/3749" data-og-image="https://scrap.kakaocdn.net/dn/EHMBd/hyUnURORkV/HKsxcvyPO1foOOmM76e7v0/img.png?width=808&amp;height=425&amp;face=0_0_808_425,https://scrap.kakaocdn.net/dn/eOer1/hyUnXAZu0s/PajolzxOpuWPukNlIFFXVk/img.png?width=808&amp;height=425&amp;face=0_0_808_425,https://scrap.kakaocdn.net/dn/wr3V9/hyUnViTIl8/womWUm7JWcuhfodYAGpS5K/img.png?width=720&amp;height=520&amp;face=0_0_720_520"><a href="https://www.inflearn.com/blogs/3749" target="_blank" rel="noopener" data-source-url="https://www.inflearn.com/blogs/3749">
+<div class="og-image" style="background-image: url('https://scrap.kakaocdn.net/dn/EHMBd/hyUnURORkV/HKsxcvyPO1foOOmM76e7v0/img.png?width=808&amp;height=425&amp;face=0_0_808_425,https://scrap.kakaocdn.net/dn/eOer1/hyUnXAZu0s/PajolzxOpuWPukNlIFFXVk/img.png?width=808&amp;height=425&amp;face=0_0_808_425,https://scrap.kakaocdn.net/dn/wr3V9/hyUnViTIl8/womWUm7JWcuhfodYAGpS5K/img.png?width=720&amp;height=520&amp;face=0_0_720_520');">&nbsp;</div>
+<div class="og-text">
+<p class="og-title" data-ke-size="size16">슬릭 슬라이더(Slick Slider) 옵션 한글 정리 - 코딩웍스(Coding Works)님의 블로그 - 인프런 | 커뮤니티</p>
+<p class="og-desc" data-ke-size="size16">슬릭 슬라이더(Slick Slider) 옵션 한글 정리 - 안녕하세요. 코딩웍스입니다.Swiper Slider, Slick Slider 등 슬라이더를 만드는 제이쿼리 플러그인이 여러개 있습니다. 그 중에 슬릭 슬라이더 옵션을 한글</p>
+<p class="og-host" data-ke-size="size16">www.inflearn.com</p>
+</div>
+</a></figure>
+<p data-ke-size="size16"><a href="https://jmjmjm.tistory.com/30" target="_blank" rel="noopener&nbsp;noreferrer">https://jmjmjm.tistory.com/30</a></p>
+<figure id="og_1698901981905" contenteditable="false" data-ke-type="opengraph" data-ke-align="alignCenter" data-og-type="article" data-og-title="[PlugIn] slick slider" data-og-description="slick slick slick_github slick 예제 #Settings settings Type Default Description accessibility boolean true 탭 및 화살표 키를 사용한다. autoplay: true일 경우, 슬라이드 변경 후 브라우저 포커스를 현재 슬라이드(또는 여" data-og-host="jmjmjm.tistory.com" data-og-source-url="https://jmjmjm.tistory.com/30" data-og-url="https://jmjmjm.tistory.com/30" data-og-image="https://scrap.kakaocdn.net/dn/ci6xxg/hyUnTeiF5K/Zhi05jQnuDdwTmVdtinhl0/img.png?width=800&amp;height=800&amp;face=0_0_800_800,https://scrap.kakaocdn.net/dn/bCun5n/hyUnU5jRWz/FiL4PviPEbmIQ0x6B7blZ1/img.png?width=800&amp;height=800&amp;face=0_0_800_800"><a href="https://jmjmjm.tistory.com/30" target="_blank" rel="noopener" data-source-url="https://jmjmjm.tistory.com/30">
+<div class="og-image" style="background-image: url('https://scrap.kakaocdn.net/dn/ci6xxg/hyUnTeiF5K/Zhi05jQnuDdwTmVdtinhl0/img.png?width=800&amp;height=800&amp;face=0_0_800_800,https://scrap.kakaocdn.net/dn/bCun5n/hyUnU5jRWz/FiL4PviPEbmIQ0x6B7blZ1/img.png?width=800&amp;height=800&amp;face=0_0_800_800');">&nbsp;</div>
+<div class="og-text">
+<p class="og-title" data-ke-size="size16">[PlugIn] slick slider</p>
+<p class="og-desc" data-ke-size="size16">slick slick slick_github slick 예제 #Settings settings Type Default Description accessibility boolean true 탭 및 화살표 키를 사용한다. autoplay: true일 경우, 슬라이드 변경 후 브라우저 포커스를 현재 슬라이드(또는 여</p>
+<p class="og-host" data-ke-size="size16">jmjmjm.tistory.com</p>
+</div>
+</a></figure>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16"><b>예제:)</b></p>
+<p data-ke-size="size16"><a href="https://tr.you84815.space/slick/index.html">https://tr.you84815.space/slick/index.html</a></p>
+<figure id="og_1698903190360" contenteditable="false" data-ke-type="opengraph" data-ke-align="alignCenter" data-og-type="article" data-og-title="slickドキュメント翻訳 | slick - にほんご。" data-og-description="slickドキュメント翻訳 slickは、カルーセルを簡単に設置できるライブラリです。 必要なライブラリを読み込んで関数を実行するだけでカルーセルを実装することができます。 また、オプショ" data-og-host="tr.you84815.space" data-og-source-url="https://tr.you84815.space/slick/index.html" data-og-url="https://tr.you84815.space/slick/index.html" data-og-image=""><a href="https://tr.you84815.space/slick/index.html" target="_blank" rel="noopener" data-source-url="https://tr.you84815.space/slick/index.html">
+<div class="og-image" style="background-image: url();">&nbsp;</div>
+<div class="og-text">
+<p class="og-title" data-ke-size="size16">slickドキュメント翻訳 | slick - にほんご。</p>
+<p class="og-desc" data-ke-size="size16">slickドキュメント翻訳 slickは、カルーセルを簡単に設置できるライブラリです。 必要なライブラリを読み込んで関数を実行するだけでカルーセルを実装することができます。 また、オプショ</p>
+<p class="og-host" data-ke-size="size16">tr.you84815.space</p>
+</div>
+</a></figure>
+<p data-ke-size="size16">&nbsp;</p>
